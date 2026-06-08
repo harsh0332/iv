@@ -1,0 +1,29 @@
+{
+  "selectedHeroImage": {
+    "filename": "ivy-estate-bhopal-header1.jpg",
+    "path": "/ivy-estate-images/ivy-estate-bhopal-header1.jpg",
+    "sizeBytes": 105721,
+    "priorityType": "Entrance View",
+    "title": "Ivy Estate Bhopal Premium Entrance Gateway",
+    "description": "Landscape photo showcasing the landscaped main entry avenue and gated columns under clear blue sky.",
+    "selectionRationale": "Chosen over alternative candidate ground photos because it represents a high-value physical entrance gate view, establishing instant trust and credibility for high-end residential buyers. The sky composition in the top half allows for clean overlay text legibility, and the green landscaping complements the primary Ivy Green theme perfectly."
+  },
+  "alternativeCandidates": [
+    {
+      "filename": "ivy-estate-banner-21.jpg",
+      "path": "/ivy-estate-images/ivy-estate-banner-21.jpg",
+      "sizeBytes": 122442,
+      "priorityType": "Development View",
+      "suitabilityRating": "Medium",
+      "rejectionReason": "Good wide visual, but colors are slightly washed and the resolution ratio has a tighter crop height, which limits text layout margins above the fold."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-overview.jpg",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-overview.jpg",
+      "sizeBytes": 127570,
+      "priorityType": "Premium Layout View",
+      "suitabilityRating": "High (Alternative)",
+      "rejectionReason": "This is an architectural diagram layout sheet. While highly informative, it lacks the real-world ground credibility of a physical photo for initial above-the-fold emotional impact. It is deferred to the Layout / Plots section."
+    }
+  ]
+}

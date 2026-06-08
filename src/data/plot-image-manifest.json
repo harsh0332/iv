@@ -1,0 +1,14 @@
+{
+  "images": [
+    {
+      "imageName": "ivy-estate-bhopal-layout-plan2.jpg",
+      "sectionAssigned": "Master Layout Experience",
+      "reasonSelected": "Detailed architectural layout plan depicting individual plot numbers, road widths, open green zones, and commercial boundaries, serving as the best foundation for the interactive master plan viewer."
+    },
+    {
+      "imageName": "ivy-estate-plot-layout-bhopal-plot-dimensions-table.png",
+      "sectionAssigned": "Plot Dimensions Section",
+      "reasonSelected": "Official, RERA-approved dimensions table showing the exact area in square meters and square feet for the layout plots, providing factual backing for the list."
+    }
+  ]
+}

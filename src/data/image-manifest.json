@@ -1,0 +1,255 @@
+{
+  "categories": [
+    "Hero Images",
+    "Gallery Images",
+    "Layout Plans",
+    "Maps",
+    "Amenities",
+    "Progress Images"
+  ],
+  "images": [
+    {
+      "filename": "ivy-estate-bhopal-header1.jpg",
+      "category": "Hero Images",
+      "path": "/ivy-estate-images/ivy-estate-bhopal-header1.jpg",
+      "sizeBytes": 105721,
+      "title": "Ivy Estate Bhopal Main Header",
+      "alt": "Ivy Estate Bhopal Main Header - Plotted colony development",
+      "description": "Main header background for the landing page showing the development scenery."
+    },
+    {
+      "filename": "ivy-estate-banner-21.jpg",
+      "category": "Hero Images",
+      "path": "/ivy-estate-images/ivy-estate-banner-21.jpg",
+      "sizeBytes": 122442,
+      "title": "Ivy Estate Hero Banner",
+      "alt": "Ivy Estate residential plots investment banner",
+      "description": "Secondary hero banner background highlighting investment opportunities in residential plots."
+    },
+    {
+      "filename": "ivy-estate-bhopal-layout-location-map.png",
+      "category": "Maps",
+      "path": "/ivy-estate-images/ivy-estate-bhopal-layout-location-map.png",
+      "sizeBytes": 320321,
+      "title": "Ivy Estate Location Map",
+      "alt": "Location map of Ivy Estate, North Bhopal near Vidisha Road",
+      "description": "Location map showcasing road connectivity and proximity to key universities and transit hubs."
+    },
+    {
+      "filename": "ivy-estate-bhopal-layout-plan1.jpg",
+      "category": "Layout Plans",
+      "path": "/ivy-estate-images/ivy-estate-bhopal-layout-plan1.jpg",
+      "sizeBytes": 50195,
+      "title": "Colony Plot Layout Sheet 1",
+      "alt": "Detailed plot layouts and grids at Ivy Estate Bhopal",
+      "description": "Layout sheet depicting plots arrangement and street structure."
+    },
+    {
+      "filename": "ivy-estate-bhopal-layout-plan2.jpg",
+      "category": "Layout Plans",
+      "path": "/ivy-estate-images/ivy-estate-bhopal-layout-plan2.jpg",
+      "sizeBytes": 195166,
+      "title": "Colony Plot Layout Sheet 2",
+      "alt": "Comprehensive layout plan of Ivy Estate plotted colony",
+      "description": "Full site plan including parks, roads, commercial zones, and residential plots."
+    },
+    {
+      "filename": "ivy-estate-features-22.jpg",
+      "category": "Amenities",
+      "path": "/ivy-estate-images/ivy-estate-features-22.jpg",
+      "sizeBytes": 110936,
+      "title": "Ivy Estate Amenities Overview",
+      "alt": "Key features and amenities banner at Ivy Estate",
+      "description": "Graphic listing premium highlights of the campus, such as roads, lights, and gated security."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-plot-dimensions-table.png",
+      "category": "Layout Plans",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-plot-dimensions-table.png",
+      "sizeBytes": 186464,
+      "title": "Plot Dimensions Table",
+      "alt": "Table listing plot sizes and dimensions in sq ft",
+      "description": "Official RERA-approved dimensions table showing area in square feet for different plots."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-overview.jpg",
+      "category": "Layout Plans",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-overview.jpg",
+      "sizeBytes": 127570,
+      "title": "Master Layout Overview",
+      "alt": "Overview of Ivy Estate master layout plan",
+      "description": "Architectural rendering of the plotted project showing road alignments and plot borders."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-photo-121.jpeg",
+      "category": "Gallery Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-121.jpeg",
+      "sizeBytes": 336570,
+      "title": "Colony Entrance and Internal Roads",
+      "alt": "Main internal asphalt road at Ivy Estate",
+      "description": "Developed internal asphalt road inside the campus showing neat street alignment."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-photo-122.jpeg",
+      "category": "Gallery Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-122.jpeg",
+      "sizeBytes": 231173,
+      "title": "Flat Terrain Residential Plot View",
+      "alt": "Residential plot ready for construction at Ivy Estate",
+      "description": "Levelled plots with demarcated boundary stones, ready for immediate construction."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-photo-123.jpeg",
+      "category": "Gallery Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-123.jpeg",
+      "sizeBytes": 197768,
+      "title": "Colony Open Green View",
+      "alt": "Open area and wide road at Ivy Estate",
+      "description": "Developed open green landscape flanking the wide internal layout roads."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-photo-124.jpeg",
+      "category": "Gallery Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-124.jpeg",
+      "sizeBytes": 301059,
+      "title": "Development Progress View",
+      "alt": "Developed layout overview at Ivy Estate",
+      "description": "Overview of the developed layout, showing completed electrification and landscaping features."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-photo-125.jpeg",
+      "category": "Gallery Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-125.jpeg",
+      "sizeBytes": 192789,
+      "title": "Community Park Alignment",
+      "alt": "Green park space inside Ivy Estate",
+      "description": "Lush green space designated for the resident community park."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic1.jpg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic1.jpg",
+      "sizeBytes": 104318,
+      "title": "Site Progress: Main Entry Gate",
+      "alt": "Ivy Estate main entrance development status",
+      "description": "On-site progress photo of the grand main entrance gate and security cabin construction."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic2.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic2.jpeg",
+      "sizeBytes": 159018,
+      "title": "Site Progress: Internal Asphalt Paving",
+      "alt": "Internal road asphalt paving work",
+      "description": "On-site photo showing the laying and rolling of high-quality asphalt roads."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic3.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic3.jpeg",
+      "sizeBytes": 145052,
+      "title": "Site Progress: Electrification Infrastructure",
+      "alt": "Electric poles and wiring work at Ivy Estate",
+      "description": "Installation of electrical posts, street lighting fixtures, and power distribution cabling."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic4.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic4.jpeg",
+      "sizeBytes": 160330,
+      "title": "Site Progress: Boundary Wall Construction",
+      "alt": "Colony perimeter boundary wall construction",
+      "description": "Work in progress on the concrete security boundary walls surrounding the development."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic5.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic5.jpeg",
+      "sizeBytes": 185113,
+      "title": "Site Progress: Open Drain System",
+      "alt": "Rainwater storm drainage installation",
+      "description": "Construction of dedicated storm drainage canals along internal road paths."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic6.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic6.jpeg",
+      "sizeBytes": 255742,
+      "title": "Site Progress: Park Landscaping",
+      "alt": "Horticultural work and landscaping in community park",
+      "description": "Plantation of trees, laying lawn grass, and establishing aesthetic park pathways."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic7.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic7.jpeg",
+      "sizeBytes": 112782,
+      "title": "Site Progress: Water Storage Tank Setup",
+      "alt": "Overhead water storage tank construction",
+      "description": "Progress photo of the central overhead reservoir ensuring uniform water supply."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic8.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic8.jpeg",
+      "sizeBytes": 122386,
+      "title": "Site Progress: Sewage Pipe Alignment",
+      "alt": "Underground sewage line installation",
+      "description": "Laying of heavy-duty sewage pipes below internal road sub-bases."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic10.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic10.jpeg",
+      "sizeBytes": 256869,
+      "title": "Site Progress: Kerbstones and Pathways",
+      "alt": "Laying pavement kerbstones along layout road",
+      "description": "Setting stone borders and pedestrian walkways alongside layout streets."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic11.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic11.jpeg",
+      "sizeBytes": 195341,
+      "title": "Site Progress: Transformer Station",
+      "alt": "Colony electric substation and transformer installation",
+      "description": "Completed installation of the local power transformer station and fencing."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic11-1.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic11-1.jpeg",
+      "sizeBytes": 195341,
+      "title": "Site Progress: Transformer Station (Copy)",
+      "alt": "Colony electric substation and transformer view",
+      "description": "Additional perspective of the power station (file duplicate of pic11)."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic12.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic12.jpeg",
+      "sizeBytes": 127203,
+      "title": "Site Progress: Campus Plantation",
+      "alt": "Avenue tree plantation along roads",
+      "description": "Avenue tree plantation showing progress towards a green and environment-friendly campus."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic13.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic13.jpeg",
+      "sizeBytes": 200103,
+      "title": "Site Progress: Plot Marking Stones",
+      "alt": "Delineation markings of plots",
+      "description": "Delineation and concrete marking posts dividing individual residential plots."
+    },
+    {
+      "filename": "ivy-estate-plot-layout-bhopal-site-pic14.jpeg",
+      "category": "Progress Images",
+      "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic14.jpeg",
+      "sizeBytes": 134865,
+      "title": "Site Progress: Completed Asphalt Road Section",
+      "alt": "Finished section of main asphalt driveway",
+      "description": "Fully prepared section of main internal double-lane driveway with street lights."
+    }
+  ]
+}

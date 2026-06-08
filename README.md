@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ivy Estate Bhopal — Plotted Development Lead Generation Portal
 
-## Getting Started
+A high-performance, premium lead-generation web platform built using Next.js, Framer Motion, and Tailwind CSS. The website is structured specifically to drive site bookings, callback requests, and direct phone/WhatsApp inquiries for residential plots at Ivy Estate, Bhopal.
 
-First, run the development server:
+---
 
+## 1. Getting Started
+
+### Prerequisites
+* Node.js v18+ or v20+
+* npm or yarn
+
+### Installation
+Clone or copy the directory, then install the dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run Local Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. Environment Variables & Deployment Configuration
 
-## Learn More
+Copy `.env.example` to `.env.local` (or configure these variables directly in your hosting platform dashboard like Vercel, Netlify, or AWS Amplify):
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Configuration Keys:
+* `NEXT_PUBLIC_SITE_URL`: The production domain name (e.g., `https://www.ivyestatebhopal.in`). Critical for XML sitemaps and search schema canonical tags.
+* `NEXT_PUBLIC_PHONE_NUMBER`: The raw phone number for CTAs and call buttons (e.g., `+919111455566`).
+* `NEXT_PUBLIC_WHATSAPP_NUMBER`: The raw 12-digit mobile number for WhatsApp (e.g., `919111455566`).
+* `NEXT_PUBLIC_WEBHOOK_URL` / `WEBHOOK_URL`: The endpoint to receive form submissions (e.g., n8n, CRM, or Zapier).
+* `NEXT_PUBLIC_GA_ID` / `GA_ID`: Google Analytics measurement ID (e.g., `G-XXXXXX`).
+* `NEXT_PUBLIC_META_PIXEL_ID` / `META_PIXEL_ID`: Meta Pixel ID (e.g., `1234567890`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 3. Lead Capture & n8n/CRM Integration
 
-## Deploy on Vercel
+When a user submits the **Site Visit Form**, **Quick Inquiry**, or **Callback Form**, a POST request is processed by the server-side API route `/api/leads`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Features:
+1. **Rate Limiting**: Limits requests to a maximum of 5 submissions per minute per IP address.
+2. **Honeypot Shield**: Silently rejects bots filling hidden input fields (`email_confirm`).
+3. **Webhook Retries**: Automatically retries sending the payload up to 3 times using exponential backoff to handle temporary server downtime.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Payload Schema:
+```json
+{
+  "name": "Jane Doe",
+  "phone": "9111455566",
+  "leadType": "site-visit",
+  "message": "[Site Visit Request] Date: 2026-06-15, Time: 10:00 AM - 01:00 PM, Budget: 30-45 Lakhs. Hello, please call me.",
+  "timestamp": "2026-06-09T02:30:00.000Z",
+  "source": "direct",
+  "page": "/"
+}
+```
+
+---
+
+## 4. Search Engine Optimization (SEO) & Schema Markup
+
+The portal is optimized for Google and Bing search indexers through the following components:
+1. **Dynamic Sitemap & Robots**: Dynamically generated at `/sitemap.xml` and `/robots.txt` using Next.js router utilities.
+2. **JSON-LD Schema**: Injecting rich structures:
+   * `WebSite`
+   * `Organization` (Vaikunthdham Colonizers details)
+   * `LocalBusiness` (`RealEstateAgent` category for local SEO optimization)
+   * `BreadcrumbList`
+   * `FAQPage` (containing 24 detailed project FAQs)
+3. **Core Web Vitals**: Minimal client JavaScript footprint, lazy-loaded visual frames, and localized Next.js Font optimizations to maintain page load speeds.
+
+---
+
+## 5. Build & Compilation Commands
+
+### Production Build compilation
+Runs type checking and generates the optimized production build bundle:
+```bash
+npm run build
+```
+
+### Code Formatting & Linting
+Enforces code standards and scans for unused imports or variables:
+```bash
+npm run lint
+```

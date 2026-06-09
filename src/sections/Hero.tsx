@@ -106,7 +106,7 @@ export default function Hero() {
               variants={fadeUp(0.8)}
               className="mt-4 text-base sm:text-lg text-primary-100/90 leading-relaxed font-sans max-w-2xl"
             >
-              Secure, RERA-approved gated residential plots in Mungalia Kot{" "}
+              Secure residential plots in an actively developing gated layout in Mungalia Kot{" "}
               <span className="text-white font-semibold">({projectData.reraNumber})</span>,
               located just 1 km from the upcoming Azim Premji University campus. Civils, internal roads, and utilities are under active progress.
             </motion.p>
@@ -157,7 +157,7 @@ export default function Hero() {
               className="mt-3.5 text-xs text-primary-200/50 font-medium font-sans flex items-center gap-1.5"
             >
               <MousePointerClick className="w-3.5 h-3.5 text-secondary-400" />
-              <span>✓ Free Cab Ride to Site • ✓ RERA Registered • ✓ No Obligation Callback</span>
+              <span>✓ Free Cab Pickup for Site Visit • ✓ RERA Registered • ✓ No Obligation Callback</span>
             </motion.p>
           </div>
 

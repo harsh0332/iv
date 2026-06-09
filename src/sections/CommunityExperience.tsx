@@ -29,7 +29,7 @@ export default function CommunityExperience() {
               <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <Image
                   src="/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-121.jpeg"
-                  alt="Completed asphalt roads and plantation corridors at Ivy Estate Bhopal"
+                  alt="Asphalt roads and plantation corridors in progress at Ivy Estate Bhopal"
                   fill
                   sizes="(max-w-768px) 100vw, 40vw"
                   className="object-cover object-center transition-transform duration-700 ease-out hover:scale-105"
@@ -41,7 +41,7 @@ export default function CommunityExperience() {
                     Broad Boulevards
                   </span>
                   <p className="text-xs text-primary-100 font-semibold leading-normal">
-                    Completed asphalt roads and streetlights form the network of this community.
+                    Asphalt roads and streetlights form the planned network of this community.
                   </p>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function CommunityExperience() {
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-primary-800">Gated Campus Walls</h4>
-                <p className="text-xs text-text-main/60 mt-1">Manned check-posts and complete concrete boundary walls.</p>
+                <p className="text-xs text-text-main/60 mt-1">Planned manned check-posts and concrete boundary walls.</p>
               </div>
             </div>
           </div>

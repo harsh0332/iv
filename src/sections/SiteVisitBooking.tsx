@@ -119,7 +119,7 @@ export default function SiteVisitBooking() {
                 <div className="rounded-lg bg-accent p-2 text-primary-800 font-bold shrink-0">✓</div>
                 <div>
                   <h4 className="font-bold text-primary-800 text-sm">Direct Office Consultation</h4>
-                  <p className="text-text-main/60 mt-0.5">Private sit-down to examine layouts, registration mutated sheets, and RERA approvals.</p>
+                  <p className="text-text-main/60 mt-0.5">Private sit-down to examine layouts, title records, and RERA approvals.</p>
                 </div>
               </div>
             </div>

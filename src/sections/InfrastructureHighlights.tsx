@@ -99,6 +99,9 @@ export default function InfrastructureHighlights() {
                   className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
+                <div className="absolute top-2 left-2 bg-primary-950/80 backdrop-blur-sm text-[8px] font-bold text-white px-2 py-0.5 rounded border border-white/10 uppercase tracking-widest">
+                  Actual Site Photo
+                </div>
               </div>
 
               {/* Content block */}

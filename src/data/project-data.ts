@@ -14,65 +14,65 @@ export const projectData: ProjectData = {
   developerName: "Vaikunthdham Colonizers & Developers",
   reraNumber: "P-OTH-17-1157",
   locationName: "Mungalia Kot, North Bhopal",
-  overviewHeading: "Secure, Gated Plotted Community in North Bhopal",
-  overviewSubtext: "Discover a premium, gated plotted community designed with modern amenities and scenic layouts.",
+  overviewHeading: "Secure Plotted Development in North Bhopal",
+  overviewSubtext: "Premium 10-acre RERA-registered gated plotted layout with planned amenities, under active development.",
   overviewContent:
-    "Ivy Estate is a premium 10-acre residential plotted development (Phase 1) strategically located in Mungalia Kot, North Bhopal, near the junction of Vidisha Road and the Outer Ring Road. Registered with Madhya Pradesh RERA (No. P-OTH-17-1157), the development offers 125 total plots, with 95 plots currently available for sale and ~49% of the campus dedicated to open/common areas. Ivy Estate is RERA-registered and under active development — civil works, internal roads, drainage and electricity are in progress; the project is moving toward its RERA completion certificate. Buyers are welcome to visit and see progress.",
+    "Ivy Estate is a gated residential plotted layout (Phase 1) of 10 acres located in Mungalia Kot, Outer Ring Road, North Bhopal, MP. Registered under MP RERA (No. P-OTH-17-1157), the layout provides 125 total plots (95 available for sale) with ~49% of the campus allocated for open and common areas. The project is situated 1 km from the upcoming Azim Premji University campus. Ivy Estate is RERA-registered and under active development — civil works, internal roads, drainage and electricity are in progress; the project is moving toward its RERA completion certificate. Buyers are welcome to visit the site to view development progress.",
   
   amenities: [
     {
       id: "clubhouse",
       name: "Exclusive Clubhouse",
-      description: "A premium community center for gatherings, leisure, and resident events.",
+      description: "A planned community clubhouse with gym and poolside garden.",
       icon: "Home",
       category: "Leisure",
     },
     {
       id: "pool",
       name: "Swimming Pool",
-      description: "A crystal-clear pool with a sun deck for relaxation and recreation.",
+      description: "A planned swimming/wading pool part of the community layout.",
       icon: "Droplets",
       category: "Leisure",
     },
     {
       id: "sports-zone",
       name: "Multi-Sport Courts",
-      description: "Dedicated courts for tennis, basketball, badminton, and a cricket practice net.",
+      description: "Planned sports layout including 2 tennis courts, 1 badminton court, basketball ring, and large cricket/football field.",
       icon: "Activity",
       category: "Sports",
     },
     {
       id: "roads",
       name: "Wide Asphalt Roads",
-      description: "Double-lane main boulevard and wide internal roads with paved footpaths.",
+      description: "Planned double-lane internal roads and paved walkways under active development.",
       icon: "Milestone",
       category: "Infrastructure",
     },
     {
       id: "sewage",
       name: "Underground Sewage",
-      description: "Modern covered drainage and sewage networks for high hygiene standards.",
+      description: "Planned drainage and water storage provision for the layout, under development.",
       icon: "Wrench",
       category: "Infrastructure",
     },
     {
       id: "electrification",
       name: "Dedicated Power & Lights",
-      description: "Central transformer station, underground wiring nodes, and bright street lights.",
+      description: "Underground electrical wiring planned and in progress across the layout.",
       icon: "Zap",
       category: "Infrastructure",
     },
     {
       id: "security",
       name: "Gated Security 24/7",
-      description: "Grand entrance archway with manned security guards and perimeter boundary walls.",
+      description: "Planned 24x7 gated security with cameras, boundary walls, and entrance gate.",
       icon: "ShieldCheck",
       category: "Security",
     },
     {
       id: "landscaping",
       name: "Community Park & Gardens",
-      description: "Beautifully landscaped open spaces, lawn lawns, and pedestrian walkways.",
+      description: "Planned landscaping including nursery garden, temple garden, and large open lawn spaces.",
       icon: "Trees",
       category: "Leisure",
     },
@@ -167,7 +167,7 @@ export const projectData: ProjectData = {
       sizeSqFt: 1200,
       dimensionsText: "Custom range up to 2600 sq.ft.",
       status: "Available",
-      highlights: ["Tailored sizing based on preference", "Premium park-facing alignments", "Clear legal titles and layout approvals"],
+      highlights: ["Select corner & odd-sized plots available", "Tailored sizing options", "Approved layout plans"],
     },
   ],
 
@@ -176,8 +176,8 @@ export const projectData: ProjectData = {
     phoneRaw: envPhoneRaw,
     email: "inquiry@ivyestatebhopal.in",
     whatsappUrl: envWhatsappUrl,
-    officeAddress: "Vaikunthdham Colonizers & Developers, Bhopal, MP",
-    siteAddress: "Ivy Estate, Mungalia Kot, Junction of Vidisha Road and Outer Ring Road, Bhopal, MP 462038",
+    officeAddress: "Sales Inquiry Office, North Bhopal",
+    siteAddress: "Ivy Estate, Mungalia Kot, Near Vidisha Road & Outer Ring Road, Bhopal, MP",
   },
 
   faq: [
@@ -212,15 +212,21 @@ export const projectData: ProjectData = {
       category: "Process",
     },
     {
+      id: "faq-independent",
+      question: "Is this website the official website of Ivy Estate?",
+      answer: "No, this is an independent marketing and lead-generation portal managed by an authorized channel partner. It is not the official developer website. We assist buyers in obtaining verified project information, layouts, and site tours.",
+      category: "General",
+    },
+    {
       id: "faq-loans",
       question: "Are bank home loans available for these plots?",
-      answer: "Yes, loan assistance is available. Our desk can guide you through the documentation process with leading lending institutions.",
+      answer: "Loan assistance is available, subject to bank eligibility guidelines. Our team can assist you with compiling the necessary documentation.",
       category: "Financing",
     },
     {
       id: "faq-apu",
       question: "How far is the upcoming Azim Premji University campus?",
-      answer: "The upcoming Azim Premji University campus is situated just 1 km from the project gates, providing excellent academic convenience in the immediate corridor.",
+      answer: "The upcoming Azim Premji University campus is situated 1 km from the project gates, providing convenient access to educational facilities in the area.",
       category: "Location",
     },
     {
@@ -232,7 +238,7 @@ export const projectData: ProjectData = {
     {
       id: "faq-sewage",
       question: "What drainage provisions are planned for the layout?",
-      answer: "A modern covered drainage network and subterranean sewage layout are planned for the campus to maintain high hygiene standards.",
+      answer: "Subterranean sewage pipelines and covered storm water drains are planned for the layout and are currently in progress.",
       category: "Infrastructure",
     },
     {
@@ -244,25 +250,25 @@ export const projectData: ProjectData = {
     {
       id: "faq-greenery",
       question: "Are there community parks and gardens planned inside?",
-      answer: "Yes, the layout plan includes ~49% open/common area, including a nursery garden, temple garden, and landscaped parks.",
+      answer: "Yes, the layout plan includes ~49% open area, which is planned to feature a nursery garden, temple garden, and landscaped green parks.",
       category: "Amenities",
     },
     {
       id: "faq-pricing",
       question: "How can I obtain the latest price list and availability?",
-      answer: "Due to changing inventory, we recommend submitting a query or using the WhatsApp link to receive the latest available plot numbers, pricing sheets, and current layout chart directly on your phone.",
+      answer: "Due to changing inventory, we recommend submitting a query or using the WhatsApp link to receive the latest available plot details and pricing directly on your phone.",
       category: "General",
     },
     {
       id: "faq-corner-plots",
       question: "Are corner plots or park-facing plots available?",
-      answer: "Yes, standard plot sizes are 1500 sq ft and 2100 sq ft, with a limited number of odd-sized plots at key locations. Please inquire for real-time availability of corner or park-facing options.",
+      answer: "Yes, standard plot sizes are 1500 sq ft and 2100 sq ft, with select odd-sized plots at key locations. Please contact us to check the real-time availability of corner or park-facing options.",
       category: "Plots",
     },
     {
       id: "faq-nri",
       question: "Is there home loan assistance for NRI buyers?",
-      answer: "Yes, we provide full NRI documentation and loan processing assistance through institutions that specialize in home loans for non-resident Indian citizens.",
+      answer: "Yes, we provide loan documentation assistance for NRI buyers, subject to individual bank eligibility criteria.",
       category: "Financing",
     },
     {
@@ -274,25 +280,25 @@ export const projectData: ProjectData = {
     {
       id: "faq-water",
       question: "How is water supply managed for the residential plots?",
-      answer: "Provisions for a central groundwater boring, community overhead water storage reservoir, and individual pipeline nodes connecting to each plot are planned.",
+      answer: "Water storage provisions, central groundwater boring, and overhead reservoir tanks are planned for the residential layout.",
       category: "Infrastructure",
     },
     {
       id: "faq-construction",
       question: "Are there any design guidelines for building homes?",
-      answer: "All home construction must align with the local town planning rules (T&CP) and local municipal bylaws to maintain structural harmony.",
+      answer: "Yes, all home construction must align with the local town planning rules (T&CP) and local municipal bylaws. We recommend verifying specific construction guidelines before planning your home.",
       category: "Plots",
     },
     {
       id: "faq-maintenance",
       question: "Who will maintain the infrastructure after development?",
-      answer: "A dedicated residents welfare association (RWA) is planned to manage security, park maintenance, and common facilities once the campus is handed over.",
+      answer: "A dedicated residents welfare association (RWA) is planned to be formed to manage maintenance, security, and common areas after hand-over.",
       category: "General",
     },
     {
       id: "faq-diversion",
       question: "Is the land diverted for residential usage?",
-      answer: "Yes, the plotted layout area has been legally diverted for residential use, conforming to Bhopal Town & Country Planning (T&CP) department requirements.",
+      answer: "Buyers are advised to verify land-use and diversion status directly with the developer or through official Town & Country Planning (T&CP) files.",
       category: "Compliance",
     },
     {
@@ -302,10 +308,16 @@ export const projectData: ProjectData = {
       category: "Amenities",
     },
     {
-      id: "faq-size-options",
-      question: "What are the standard plot sizes in Phase 1?",
-      answer: "The plots are mainly 1500 sq ft (e.g. 30x50 ft) and 2100 sq ft (e.g. 35x60 ft), along with select odd-sized plots at key layout points.",
-      category: "Plots",
+      id: "faq-possession",
+      question: "Is immediate physical possession available?",
+      answer: "Physical possession is subject to development progress and the terms of the sale agreement. Buyers are welcome to visit the site to view current progress.",
+      category: "Timeline",
+    },
+    {
+      id: "faq-registry",
+      question: "How is the registry process managed?",
+      answer: "The registry process is executed upon completion of all legal checks and clearances. Buyers should verify title and registry feasibility status during their site visit.",
+      category: "Financing",
     }
   ],
 

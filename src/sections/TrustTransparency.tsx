@@ -17,7 +17,7 @@ export default function TrustTransparency() {
     },
     {
       title: "Complete RERA Access",
-      desc: "All registry sheets, RERA diversion papers, and approved layout blueprints are available for review on-site.",
+      desc: "All layout plans, RERA registration records, and official blueprints are available for review on-site.",
       icon: <FileText className="w-5 h-5 text-secondary-500" />,
     },
     {

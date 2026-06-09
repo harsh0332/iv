@@ -92,3 +92,27 @@ Enforces code standards and scans for unused imports or variables:
 ```bash
 npm run lint
 ```
+
+---
+
+## 6. Pre-Launch Checklist (Action Required for Harsh)
+
+Before going live and directing advertising traffic (Meta/Google Ads) to this portal, ensure the following steps are completed:
+
+1. **Configure Environment Variables**:
+   In your hosting provider (e.g. Vercel dashboard), set these variables to active production values:
+   * `NEXT_PUBLIC_SITE_URL`: Set to the official domain, e.g. `https://www.ivyestatebhopal.in` (without trailing slash).
+   * `NEXT_PUBLIC_PHONE_NUMBER`: Set to the real sales desk mobile number (e.g. `+919111455566`).
+   * `NEXT_PUBLIC_WHATSAPP_NUMBER`: Set to the real WhatsApp recipient mobile number (e.g. `919111455566`, including country code, no symbols or spaces).
+   * `NEXT_PUBLIC_WEBHOOK_URL` and `WEBHOOK_URL`: Set to your active n8n, CRM, or Zapier webhook endpoint to capture leads.
+
+2. **Verify Lead Capture Flow**:
+   - Submit a test lead on the web page.
+   - Confirm that the lead data lands successfully in your n8n workspace or CRM.
+   - Verify that in case of webhook failure, the WhatsApp fallback button triggers and opens WhatsApp with the pre-populated lead details.
+
+3. **Legal & Registration Verification**:
+   - Double check that the RERA registration number `P-OTH-17-1157` is in active and good standing on the MP RERA portal.
+   - Verify that the land diversion certificate (T&CP approval) and ownership titles are fully in place before launching search or social ads.
+   - Inspect the on-ground construction progress of the main entry gate, asphalt roads, and utilities to ensure the marketing material matches the physical reality for site visits.
+

@@ -38,7 +38,7 @@ export default function LifestyleIntro() {
           >
             When you secure a home space at Ivy Estate, you are investing in much more than acreage. 
             You are choosing a balanced environment, seamless regional accessibility, a secure gated 
-            neighborhood, and the long-term utility of completed concrete roadways and underground cabling. 
+            neighborhood, and the long-term utility of planned internal concrete roadways and electricity networks under active development. 
             It is a future-proof foundation built for family comfort, wellness, and lasting value.
           </motion.p>
         </div>

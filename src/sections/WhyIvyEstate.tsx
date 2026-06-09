@@ -31,7 +31,7 @@ export default function WhyIvyEstate() {
     {
       id: "security",
       title: "Secure Gated Colony Bounds",
-      description: "Manned security check-points, a grand entry archway, and complete reinforced boundary walls safeguard families and investments 24/7.",
+      description: "Manned security check-points, a grand entry archway, and reinforced perimeter boundary walls safeguard families and investments 24/7.",
       icon: <Shield className="w-5 h-5 text-primary-800" />,
     },
     {

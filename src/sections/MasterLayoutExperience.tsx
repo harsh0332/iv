@@ -245,7 +245,7 @@ export default function MasterLayoutExperience() {
                     Plot #{selectedPlot.plotNo}
                   </span>
                   <span className="text-[9px] font-semibold uppercase tracking-wider bg-white border border-border-soft/60 px-2 py-0.5 rounded text-text-main/60">
-                    {selectedPlot.category}
+                    {selectedPlot.corner ? "Corner" : selectedPlot.sizeSqFt >= 2000 ? "Premium / Large" : "Standard"}
                   </span>
                 </div>
 

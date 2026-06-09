@@ -12,10 +12,10 @@ export default function LifestyleCTA() {
   const { openModal } = useModal();
 
   const tourBenefits = [
-    { label: "Walk the Finished Asphalt Roads", icon: <Compass className="w-4 h-4 text-secondary-400" /> },
-    { label: "Inspect Completed Water & Power Sub-bases", icon: <ShieldCheck className="w-4 h-4 text-secondary-400" /> },
-    { label: "Receive Printed Layout Grids & RERA Files", icon: <Map className="w-4 h-4 text-secondary-400" /> },
-    { label: "Experience the Green buffer boundaries", icon: <Leaf className="w-4 h-4 text-secondary-400" /> },
+    { label: "Walk the in-progress internal roads", icon: <Compass className="w-4 h-4 text-secondary-400" /> },
+    { label: "Inspect planned water & power sub-bases", icon: <ShieldCheck className="w-4 h-4 text-secondary-400" /> },
+    { label: "Receive printed layout grids & RERA files", icon: <Map className="w-4 h-4 text-secondary-400" /> },
+    { label: "Experience the green buffer boundaries", icon: <Leaf className="w-4 h-4 text-secondary-400" /> },
   ];
 
   return (

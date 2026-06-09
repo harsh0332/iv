@@ -13,7 +13,7 @@ export default function PlotCTA() {
 
   const tourBenefits = [
     { label: "Verify boundary posts and plot dimensions in person", icon: <MapPin className="w-4 h-4 text-secondary-400" /> },
-    { label: "Inspect completed double-lane roads and drainage", icon: <ShieldCheck className="w-4 h-4 text-secondary-400" /> },
+    { label: "Inspect planned double-lane roads and drainage plans", icon: <ShieldCheck className="w-4 h-4 text-secondary-400" /> },
     { label: "Receive printed layout blueprints & RERA copies", icon: <Map className="w-4 h-4 text-secondary-400" /> },
     { label: "No-pressure, educational tour guided by on-site engineers", icon: <Clock className="w-4 h-4 text-secondary-400" /> },
   ];

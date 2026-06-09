@@ -10,8 +10,8 @@ import Button from "@/components/Button";
 export default function PlotSizeComparison() {
   const whatsappNumber = projectData.contact.whatsappUrl.includes("wa.me")
     ? projectData.contact.whatsappUrl.split("wa.me/")[1]?.split("?")[0]
-    : "919111455566";
-  const cleanNumber = (whatsappNumber || "919111455566").replace(/[^0-9]/g, "");
+    : "919893223331";
+  const cleanNumber = (whatsappNumber || "919893223331").replace(/[^0-9]/g, "");
 
   const plotTypes = [
     {

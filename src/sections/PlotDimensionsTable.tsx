@@ -29,8 +29,8 @@ export default function PlotDimensionsTable() {
   const getWhatsAppLink = (plotNo: string, sizeSqFt: number) => {
     const rawNumber = projectData.contact.whatsappUrl.includes("wa.me")
       ? projectData.contact.whatsappUrl.split("wa.me/")[1]?.split("?")[0]
-      : "919111455566";
-    const cleanNumber = (rawNumber || "919111455566").replace(/[^0-9]/g, "");
+      : "919893223331";
+    const cleanNumber = (rawNumber || "919893223331").replace(/[^0-9]/g, "");
     const text = `Hi, I am interested in Plot #${plotNo} (${sizeSqFt.toLocaleString()} Sq. Ft.) at Ivy Estate Bhopal. Please share availability and pricing details.`;
     return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
   };

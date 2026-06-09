@@ -33,8 +33,8 @@ cp .env.example .env.local
 
 ### Configuration Keys:
 * `NEXT_PUBLIC_SITE_URL`: The production domain name (e.g., `https://www.ivyestatebhopal.in`). Critical for XML sitemaps and search schema canonical tags.
-* `NEXT_PUBLIC_PHONE_NUMBER`: The raw phone number for CTAs and call buttons (e.g., `+919111455566`).
-* `NEXT_PUBLIC_WHATSAPP_NUMBER`: The raw 12-digit mobile number for WhatsApp (e.g., `919111455566`).
+* `NEXT_PUBLIC_PHONE_NUMBER`: The raw phone number for CTAs and call buttons (e.g., `+919893223331`).
+* `NEXT_PUBLIC_WHATSAPP_NUMBER`: The raw 12-digit mobile number for WhatsApp (e.g., `919893223331`).
 * `NEXT_PUBLIC_WEBHOOK_URL` / `WEBHOOK_URL`: The endpoint to receive form submissions (e.g., n8n, CRM, or Zapier).
 * `NEXT_PUBLIC_GA_ID` / `GA_ID`: Google Analytics measurement ID (e.g., `G-XXXXXX`).
 * `NEXT_PUBLIC_META_PIXEL_ID` / `META_PIXEL_ID`: Meta Pixel ID (e.g., `1234567890`).
@@ -54,7 +54,7 @@ When a user submits the **Site Visit Form**, **Quick Inquiry**, or **Callback Fo
 ```json
 {
   "name": "Jane Doe",
-  "phone": "9111455566",
+  "phone": "9893223331",
   "leadType": "site-visit",
   "message": "[Site Visit Request] Date: 2026-06-15, Time: 10:00 AM - 01:00 PM, Budget: 30-45 Lakhs. Hello, please call me.",
   "timestamp": "2026-06-09T02:30:00.000Z",
@@ -102,8 +102,8 @@ Before going live and directing advertising traffic (Meta/Google Ads) to this po
 1. **Configure Environment Variables**:
    In your hosting provider (e.g. Vercel dashboard), set these variables to active production values:
    * `NEXT_PUBLIC_SITE_URL`: Set to the official domain, e.g. `https://www.ivyestatebhopal.in` (without trailing slash).
-   * `NEXT_PUBLIC_PHONE_NUMBER`: Set to the real sales desk mobile number (e.g. `+919111455566`).
-   * `NEXT_PUBLIC_WHATSAPP_NUMBER`: Set to the real WhatsApp recipient mobile number (e.g. `919111455566`, including country code, no symbols or spaces).
+   * `NEXT_PUBLIC_PHONE_NUMBER`: Set to the real sales desk mobile number (e.g. `+919893223331`).
+   * `NEXT_PUBLIC_WHATSAPP_NUMBER`: Set to the real WhatsApp recipient mobile number (e.g. `919893223331`, including country code, no symbols or spaces).
    * `NEXT_PUBLIC_WEBHOOK_URL` and `WEBHOOK_URL`: Set to your active n8n, CRM, or Zapier webhook endpoint to capture leads.
 
 2. **Verify Lead Capture Flow**:

@@ -46,12 +46,13 @@ export default function SchemaMarkup() {
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mungalia Kot, Junction of Vidisha Road and Outer Ring Road",
+      "streetAddress": "Mungalia Kot, near bypass",
       "addressLocality": "Bhopal",
-      "addressRegion": "MP",
+      "addressRegion": "Madhya Pradesh",
       "postalCode": "462038",
       "addressCountry": "IN"
     },
+    "hasMap": "https://maps.app.goo.gl/4acCvruMcTvey5XA9",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "23.3283",
@@ -61,7 +62,7 @@ export default function SchemaMarkup() {
     "url": siteUrl,
     "openingHours": "Mo-Su 10:00-18:00"
   };
-
+ 
   // 4. Residence Schema (RealEstate/Residence)
   const residenceSchema = {
     "@context": "https://schema.org",
@@ -70,12 +71,13 @@ export default function SchemaMarkup() {
     "description": "Premium 10-acre RERA-registered gated residential plotted layout in Mungalia Kot, North Bhopal.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Mungalia Kot, Junction of Vidisha Road and Outer Ring Road",
+      "streetAddress": "Mungalia Kot, near bypass",
       "addressLocality": "Bhopal",
-      "addressRegion": "MP",
+      "addressRegion": "Madhya Pradesh",
       "postalCode": "462038",
       "addressCountry": "IN"
     },
+    "hasMap": "https://maps.app.goo.gl/4acCvruMcTvey5XA9",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "23.3283",

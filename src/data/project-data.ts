@@ -1,12 +1,12 @@
 import { ProjectData } from "@/types";
 
-const envPhoneRaw = process.env.NEXT_PUBLIC_PHONE_NUMBER || "[NEXT_PUBLIC_PHONE_NUMBER]";
-const envPhoneDisplay = envPhoneRaw;
+const envPhoneRaw = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+919893223331";
+const envPhoneDisplay = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+91 98932 23331";
 
-const envWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "[NEXT_PUBLIC_WHATSAPP_NUMBER]";
-const envWhatsappUrl = envWhatsappNumber.includes("NEXT_PUBLIC")
-  ? "#"
-  : `https://wa.me/${envWhatsappNumber.replace(/[^0-9]/g, "")}?text=Hi,%20I%20am%20interested%20in%20Ivy%20Estate%20Bhopal%20plots.%20Please%20share%20layout%20plan%20and%20pricing.`;
+const envWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919893223331";
+const cleanWhatsappNumber = envWhatsappNumber.replace(/[^0-9]/g, "");
+const envWhatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=Hi,%20I%20am%20interested%20in%20Ivy%20Estate%20Bhopal%20plots.%20Please%20share%20the%20layout%20plan%20and%20details.`;
+
 
 export const projectData: ProjectData = {
   projectName: "Ivy Estate",

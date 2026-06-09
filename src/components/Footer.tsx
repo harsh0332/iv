@@ -146,12 +146,22 @@ export default function Footer() {
                 </span>
               </a>
 
-              <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-secondary-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong className="block text-[10px] uppercase text-white/50 font-sans tracking-wide">Site Address</strong>
-                  Mungalia Kot, Junction of Vidisha Road and Outer Ring Road, Bhopal, MP
-                </span>
+              <div className="flex flex-col gap-1.5">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-4 h-4 text-secondary-400 shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="block text-[10px] uppercase text-white/50 font-sans tracking-wide">Site Address</strong>
+                    Mungalia Kot, Junction of Vidisha Road and Outer Ring Road, Bhopal, MP
+                  </span>
+                </div>
+                <a
+                  href="https://maps.app.goo.gl/4acCvruMcTvey5XA9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-7 text-[11px] text-secondary-400 hover:text-secondary-300 font-sans font-semibold transition-colors hover:underline flex items-center gap-1"
+                >
+                  Get Directions &rarr;
+                </a>
               </div>
             </div>
           </div>

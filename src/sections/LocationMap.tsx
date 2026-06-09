@@ -106,7 +106,7 @@ export default function LocationMap() {
                 {activeTab === "street" ? (
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://maps.google.com/maps?q=Mungalia%20Kot,%20Outer%20Ring%20Road,%20Bhopal&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                      src="https://www.google.com/maps?q=Ivy%20Estate%20Bhopal%2C%20Mungalia%20Kot%2C%20near%20bypass%2C%20Bhopal%2C%20Madhya%20Pradesh%20462038&output=embed"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -114,7 +114,7 @@ export default function LocationMap() {
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
                       className="absolute inset-0 w-full h-full rounded-xl"
-                      title="Ivy Estate Bhopal Location Map"
+                      title="Ivy Estate Bhopal location map"
                     ></iframe>
                     {/* Approximate location label */}
                     <div className="absolute bottom-4 left-4 right-4 z-10 bg-primary-950/90 backdrop-blur-md border border-white/10 rounded-lg p-2.5 text-[10px] text-white text-center shadow-lg font-sans">
@@ -138,6 +138,26 @@ export default function LocationMap() {
                   </div>
                 )}
               </div>
+            </div>
+
+            {/* Directions Links */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 items-center w-full justify-center">
+              <a
+                href="https://maps.app.goo.gl/4acCvruMcTvey5XA9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 bg-secondary-500 hover:bg-secondary-600 text-primary-950 font-sans font-semibold text-xs tracking-wider uppercase rounded-xl transition-all shadow-md hover:shadow-lg cursor-pointer min-h-[44px]"
+              >
+                Get Directions
+              </a>
+              <a
+                href="https://maps.app.goo.gl/4acCvruMcTvey5XA9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-800 hover:text-primary-900 font-sans font-semibold text-xs transition-colors flex items-center gap-1 hover:underline min-h-[44px]"
+              >
+                Open in Google Maps &rarr;
+              </a>
             </div>
           </motion.div>
         </motion.div>

@@ -33,14 +33,14 @@ export default function FutureFamily() {
     },
     {
       id: "infrastructure",
-      title: "Underground Infrastructure",
-      desc: "Ready subterranean utilities, including covered sewage pipes, stormwater drains, and electricity distribution, remove the visual clutter of overhead lines.",
+      title: "Underground Infrastructure Layout",
+      desc: "Planned underground wiring, covered drainage layout, and water storage provisions are designed to keep the campus neat and remove overhead visual clutter.",
       icon: <Layers className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "potential",
-      title: "Strong Institutional Growth",
-      desc: "Sitting just 1 km from the upcoming 50-acre Azim Premji University campus, securing high rental demand, value growth, and educational facilities nearby.",
+      title: "Strong Institutional Proximity",
+      desc: "Sitting just 1 km from the upcoming Azim Premji University campus, offering excellent proximity to educational facilities in a growing neighborhood.",
       icon: <Landmark className="w-5 h-5 text-secondary-500" />,
     },
   ];

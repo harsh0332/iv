@@ -13,7 +13,7 @@ export default function WhyNorthBhopal() {
     {
       id: "edu",
       title: "Educational Catalyst",
-      desc: "The upcoming Azim Premji University campus just 1 km away acts as a major institutional anchor, driving rental, student, and faculty housing demands.",
+      desc: "The upcoming Azim Premji University campus just 1 km away acts as a major institutional anchor, offering excellent educational proximity for the region.",
       icon: <Landmark className="w-5 h-5 text-secondary-500" />,
     },
     {
@@ -24,14 +24,14 @@ export default function WhyNorthBhopal() {
     },
     {
       id: "growth",
-      title: "Rapid Appreciation Corridor",
-      desc: "North Bhopal is witnessing massive public road expansions, making it the most active residential development zone in the city.",
+      title: "Growth Corridor",
+      desc: "North Bhopal is witnessing public road expansions, making it a growing residential layout zone.",
       icon: <TrendingUp className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "safety",
-      title: "Legal & Structural Safety",
-      desc: "Unlike local plotted societies, Ivy Estate is a fully approved, RERA-compliant gated community with complete utility sub-bases already built.",
+      title: "Legal Compliance",
+      desc: "Unlike local plotted societies, Ivy Estate is a RERA-compliant gated community layout with planned utility networks and infrastructure in progress.",
       icon: <ShieldCheck className="w-5 h-5 text-secondary-500" />,
     },
   ];
@@ -67,11 +67,11 @@ export default function WhyNorthBhopal() {
               className="text-sm text-text-main/80 leading-relaxed font-sans mb-10 max-w-2xl"
             >
               North Bhopal, particularly the Mungalia Kot corridor, is currently experiencing 
-              a major developmental shift. The integration of the new Bhopal Outer Ring Road bypass 
-              has established this corridor as a strategic link. Coupled with institutional giants like 
-              the 50-acre Azim Premji University campus, property valuations in this specific zone are 
-              backed by concrete educational and transit growth drivers. Gated plotted colonies like Ivy 
-              Estate represent the safest entry point for immediate asset security and future villa building.
+              developmental growth. The integration of the new Bhopal Outer Ring Road bypass 
+              has established this corridor as a strategic link. Coupled with institutional anchors like 
+              the upcoming Azim Premji University campus, this specific zone offers excellent accessibility 
+              and connectivity. Plotted layouts like Ivy Estate represent a secure entry point for planning 
+              your future residential villa.
             </motion.p>
 
             {/* Growth Drivers 2x2 Grid */}
@@ -123,7 +123,7 @@ export default function WhyNorthBhopal() {
                     Landscaped Avenues
                   </span>
                   <p className="text-xs text-primary-100 font-semibold leading-normal">
-                    Secure campus walls and plantation corridors are complete and registry mutation is active.
+                    Secure campus boundaries and landscaping are designed and in progress.
                   </p>
                 </div>
               </div>

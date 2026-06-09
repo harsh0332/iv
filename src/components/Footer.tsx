@@ -46,8 +46,8 @@ export default function Footer() {
               Bhopal Plotted Campus
             </span>
             <p className="text-white/70 leading-relaxed mb-4">
-              A premium 10-acre gated residential colony in North Bhopal, offering fully developed plots 
-              with completed asphalt streetscapes, electrical nodes, and RERA-approved title structures.
+              A premium 10-acre gated residential colony in North Bhopal, offering gated residential plots 
+              with asphalt streetscapes, electrical nodes, and RERA-approved title structures planned or in progress.
             </p>
             <div className="text-[10px] text-white/50 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg">
               MP RERA ID: {projectData.reraNumber}
@@ -162,7 +162,7 @@ export default function Footer() {
               Book a Visit
             </h4>
             <p className="text-white/70 leading-relaxed mb-6">
-              Take a guided tour of the completed roadways, utility connections, and inspect boundary demarcations.
+              Take a guided tour of the site to see the layout development, planned roadways, and infrastructure progress.
             </p>
             
             <div className="flex flex-col gap-3 w-full">

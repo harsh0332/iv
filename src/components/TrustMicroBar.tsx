@@ -30,7 +30,7 @@ export default function TrustMicroBar({ isVisible = false }: TrustMicroBarProps)
     },
     {
       id: "finance",
-      label: "Government Bank Loan Assistance Available",
+      label: "Loan Assistance Available",
       icon: <Landmark className="w-3.5 h-3.5 text-secondary-300" />,
     },
   ];
@@ -48,7 +48,7 @@ export default function TrustMicroBar({ isVisible = false }: TrustMicroBarProps)
         </div>
         <div className="hidden md:flex items-center gap-1.5 text-secondary-300 font-semibold tracking-wider uppercase text-[10px]">
           <span className="w-1.5 h-1.5 rounded-full bg-secondary-400 animate-ping"></span>
-          <span>Plot Bookings Active</span>
+          <span>Site Visits Welcome</span>
         </div>
       </div>
     </div>

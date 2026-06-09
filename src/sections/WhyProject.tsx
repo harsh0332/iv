@@ -12,19 +12,19 @@ export default function WhyProject() {
     {
       id: "university",
       title: "Azim Premji University Corridor",
-      description: "Located just 1 km from the upcoming 50-acre educational anchor campus. Proximity to major institutions guarantees consistent rental demand and premium capital appreciation.",
+      description: "Located just 1 km from the upcoming educational anchor campus, offering excellent academic convenience and proximity for faculty and students.",
       icon: <GraduationCap className="w-5 h-5 text-primary-800" />,
     },
     {
       id: "legal",
-      title: "Registry & Mutation Feasibility",
-      description: "100% RERA-registered layout (No. P-OTH-17-1157) with cleared titles. Plot demarcations are complete, allowing immediate registry and mutation upon purchase.",
+      title: "RERA-Approved Layout",
+      description: "100% RERA-registered layout (No. P-OTH-17-1157) with cleared titles, offering a legally compliant and secure plotted development structure.",
       icon: <FileText className="w-5 h-5 text-primary-800" />,
     },
     {
       id: "roads",
-      title: "Completed Asphalt Infrastructure",
-      description: "High-spec double-lane main boulevard and wide internal roads are fully paved with kerbstones. Immediate vehicular access is available across the campus.",
+      title: "Asphalt Infrastructure Progress",
+      description: "High-spec double-lane main boulevard and wide internal roads are planned and currently under active construction, providing structured internal transit.",
       icon: <Road className="w-5 h-5 text-primary-800" />,
     },
     {
@@ -35,8 +35,8 @@ export default function WhyProject() {
     },
     {
       id: "utilities",
-      title: "Self-Sustaining Utility Network",
-      description: "Equipped with dedicated electricity transformer lines, a central overhead water storage reservoir, and concrete underground sewage systems.",
+      title: "Designed Utility Layouts",
+      description: "Designed to include underground electrical wiring nodes, central water storage provisions, and planned storm water drainage networks.",
       icon: <Droplets className="w-5 h-5 text-primary-800" />,
     },
   ];
@@ -118,7 +118,7 @@ export default function WhyProject() {
                     Actual Ground Photo
                   </span>
                   <p className="text-xs text-primary-100 font-semibold leading-normal">
-                    Paved double-lane roads and streetlights complete inside the campus.
+                    Double-lane roads and streetlights in progress inside the campus.
                   </p>
                 </div>
               </div>

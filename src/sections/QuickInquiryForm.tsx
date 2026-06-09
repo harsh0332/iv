@@ -23,7 +23,7 @@ export default function QuickInquiryForm() {
       id: "message",
       label: "What details do you need?",
       type: "text" as const,
-      placeholder: "e.g. Please send pricing, plot availability chart, and bank loan list.",
+      placeholder: "e.g. Please send pricing, plot availability chart, and layout plan.",
       required: true,
     },
   ];

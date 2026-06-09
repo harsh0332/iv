@@ -12,14 +12,14 @@ export default function PlotSelectionGuide() {
       title: "First-Time Home Buyers",
       icon: <Heart className="w-5 h-5 text-secondary-500" />,
       recommendation: "1,500 Sq. Ft. Standard Plots",
-      rationale: "Optimizes construction budgets while leaving ample room for a 3BHK duplex. The secure gated perimeter and completed internal asphalt lanes ensure a safe, move-in-ready start for young families.",
+      rationale: "Optimizes construction budgets while leaving ample room for a 3BHK duplex. The secure gated perimeter and planned internal asphalt lanes ensure a structured start for young families.",
     },
     {
       id: "investor",
       title: "Long-Term Investors",
       icon: <Landmark className="w-5 h-5 text-secondary-500" />,
       recommendation: "Plots Near the University Entrance",
-      rationale: "Positions capital near the upcoming 50-acre Azim Premji University campus (1 km). This close proximity maximizes future rental demand from faculty/students and accelerates land appreciation.",
+      rationale: "Positions your asset near the upcoming Azim Premji University campus (1 km), offering excellent proximity to educational facilities in a growing corridor.",
     },
     {
       id: "family",
@@ -30,10 +30,10 @@ export default function PlotSelectionGuide() {
     },
     {
       id: "immediate",
-      title: "Immediate Construction",
+      title: "Villa Construction Planning",
       icon: <Key className="w-5 h-5 text-secondary-500" />,
-      recommendation: "Levelled Plots with Complete Utilities",
-      rationale: "Choose plots with direct access to pre-built drainage pipes, underground wiring nodes, and completed road kerbstones. Ready for immediate registry, mutation, and foundation work.",
+      recommendation: "Levelled Plots with Planned Utilities",
+      rationale: "Choose plots with direct access to planned drainage connection points, electrical wiring nodes, and internal road alignments designed for villa construction.",
     },
   ];
 

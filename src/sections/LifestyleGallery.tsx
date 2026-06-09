@@ -11,16 +11,16 @@ export default function LifestyleGallery() {
       id: "img1",
       src: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-122.jpeg",
       alt: "Levelled plots at Ivy Estate ready for villa construction",
-      title: "Construction Ready Plots",
-      subtitle: "Levelled terrain with concrete demarcation stones in place.",
+      title: "Villa Plots Layout",
+      subtitle: "Levelled layout terrain designed for independent construction.",
       gridClass: "md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto",
     },
     {
       id: "img2",
       src: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-photo-124.jpeg",
-      alt: "Ivy Estate campus overview showing completed roads and streetlights",
-      title: "Completed Avenues",
-      subtitle: "Wide main driveways and electrification grids fully installed.",
+      alt: "Ivy Estate campus overview showing roads and streetlights in progress",
+      title: "Layout Avenues",
+      subtitle: "Wide main driveways and planned electrification grids.",
       gridClass: "md:col-span-1 aspect-square",
     },
     {
@@ -36,7 +36,7 @@ export default function LifestyleGallery() {
       src: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic1.jpg",
       alt: "Grand main entry gate and security cabin under progress",
       title: "Manned Entry Arch",
-      subtitle: "Secured gated entrance structure nearing on-site completion.",
+      subtitle: "Secured gated entrance structure planned for layout security.",
       gridClass: "md:col-span-1 aspect-square",
     },
     {
@@ -77,7 +77,7 @@ export default function LifestyleGallery() {
             variants={fadeUp(0.7)}
             className="text-3xl md:text-4xl font-serif font-medium text-primary-800 leading-tight tracking-tight"
           >
-            A Glimpse of the Developed Campus
+            A Glimpse of the Campus Layout
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -86,7 +86,7 @@ export default function LifestyleGallery() {
             variants={fadeUp(0.8)}
             className="text-sm text-text-main/70 mt-3 leading-relaxed font-sans"
           >
-            View authentic on-site photos illustrating finished asphalt roads, 
+            View authentic on-site photos illustrating planned asphalt roads, 
             gated checkpoints, utility stations, and landscaped parks.
           </motion.p>
         </div>

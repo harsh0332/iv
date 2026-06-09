@@ -46,7 +46,7 @@ export default function HighlightsGrid() {
             <motion.div variants={fadeUp(0.6)} className="h-full">
               <InfoCard
                 title="Educational Proximity"
-                subtitle="High appreciation zone"
+                subtitle="Near Azim Premji University"
                 metaText="APU Campus"
                 detailRows={educationRows}
                 className="h-full border-border-soft/60"
@@ -81,7 +81,7 @@ export default function HighlightsGrid() {
                 title="24/7 Gated Perimeter"
                 category="Security"
                 iconName="Shield"
-                description="Equipped with a grand entrance archway, manned check-posts, and continuous masonry boundary walls enclosing the 10-acre sector."
+                description="Designed to feature a grand entrance archway, manned check-posts, and continuous masonry boundary walls enclosing the 10-acre sector."
                 className="h-full border-border-soft/60"
               />
             </motion.div>
@@ -92,7 +92,7 @@ export default function HighlightsGrid() {
                 title="Wide Asphalt Grids"
                 category="Infrastructure"
                 iconName="Road"
-                description="Engineered double-lane main boulevard and wide internal roads with paved walking paths and storm drainage complete on-site."
+                description="Engineered double-lane main boulevard and wide internal roads with paved walking paths and storm drainage planned or in progress."
                 className="h-full border-border-soft/60"
               />
             </motion.div>
@@ -103,7 +103,7 @@ export default function HighlightsGrid() {
                 title="100% RERA Registered"
                 category="Legal Compliance"
                 iconName="FileText"
-                description={`MP RERA Registration No. ${projectData.reraNumber}. All layout approvals, diversion certificates, and development mutation logs are fully cleared.`}
+                description={`MP RERA Registration No. ${projectData.reraNumber}. All layout plans are approved and cleared by the state town and country planning (T&CP) department.`}
                 className="h-full border-border-soft/60"
               />
             </motion.div>

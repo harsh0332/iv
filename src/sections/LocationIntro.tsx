@@ -38,8 +38,7 @@ export default function LocationIntro() {
             className="text-base text-text-main/80 leading-relaxed font-sans max-w-2xl"
           >
             Ivy Estate sits at a high-growth node in North Bhopal, directly at the junction of 
-            Vidisha Road and the Outer Ring Road. Offering a perfect balance of immediate residential 
-            livability and long-term asset appreciation, this location provides swift access to key transit 
+            Vidisha Road and the Outer Ring Road. Offering a perfect balance of convenient living, this location provides swift access to key transit 
             terminals, top-tier schools, healthcare services, and the upcoming Azim Premji University campus.
           </motion.p>
         </div>

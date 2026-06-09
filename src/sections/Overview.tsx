@@ -21,7 +21,7 @@ export default function Overview() {
     { label: "Development Scale", value: "10 Acres Gated Township" },
     { label: "Residential Density", value: "125 Individual Plots" },
     { label: "Plot Sizes Available", value: "1,500 Sq. Ft. & 2,100 Sq. Ft. (Primary)" },
-    { label: "Campus Infrastructure", value: "Covered Sewage, Wide Roads, Gated Security" },
+    { label: "Campus Infrastructure", value: "Planned Covered Sewage, Wide Roads, Gated Security Provisions" },
   ];
 
   return (
@@ -77,7 +77,7 @@ export default function Overview() {
             />
             <StatCard
               value="125 Plots"
-              label="Limited Availability"
+              label="Phase 1 Layout"
               subLabel="Planned plot layouts"
               className="bg-accent/20 border-border-soft/60"
             />
@@ -85,12 +85,12 @@ export default function Overview() {
             <div className="sm:col-span-2 space-y-4 pt-2">
               <TrustCard
                 title="RERA Registered"
-                description={`Fully approved under MP RERA Registration Number ${projectData.reraNumber}, ensuring absolute legal safety and registry mutation feasibility.`}
+                description={`Fully approved under MP RERA Registration Number ${projectData.reraNumber}, ensuring layout compliance and verified property titles.`}
                 iconName="ShieldCheck"
               />
               <TrustCard
-                title="Bank Loan Facility"
-                description="Project approved by major nationalized and private banks. Full loan documentation and application assistance provided."
+                title="Loan Assistance"
+                description="Loan assistance is available for qualified buyers. Full documentation and coordinating support is provided to simplify your application process."
                 iconName="Landmark"
               />
             </div>
@@ -115,13 +115,12 @@ export default function Overview() {
             </div>
             
             <h3 className="text-2xl md:text-3xl font-serif font-medium leading-tight mb-4">
-              Experience the Developed Campus Firsthand
+              Experience the Planned Layout Firsthand
             </h3>
             
             <p className="text-sm text-primary-100/90 leading-relaxed max-w-2xl font-sans mb-8">
               Schedule a private site visit today. We provide a complimentary pick-and-drop service in Bhopal 
-              with no obligation. A dedicated relationship manager will guide you through the layouts, road grids, 
-              and electrical nodes.
+              with no obligation. A dedicated relationship manager will guide you through the site layout, planned road grids, and development progress.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto font-sans">

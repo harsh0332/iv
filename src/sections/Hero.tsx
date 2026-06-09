@@ -39,7 +39,7 @@ export default function Hero() {
     { label: "Developer", value: projectData.developerName },
     { label: "Location Zone", value: "Vidisha Road & Outer Ring Rd Junction" },
     { label: "Standard Sizes", value: "1,500 & 2,100 Sq. Ft." },
-    { label: "Immediate Registry", value: "Registry & Mutation Active" },
+    { label: "Development Status", value: "Active Infrastructure Progress" },
     { label: "Primary Landmark", value: "1 km from Azim Premji University" },
   ];
 
@@ -106,9 +106,9 @@ export default function Hero() {
               variants={fadeUp(0.8)}
               className="mt-4 text-base sm:text-lg text-primary-100/90 leading-relaxed font-sans max-w-2xl"
             >
-              Secure, fully developed residential plots in Mungalia Kot. Fully RERA-approved{" "}
+              Secure, RERA-approved gated residential plots in Mungalia Kot{" "}
               <span className="text-white font-semibold">({projectData.reraNumber})</span>,
-              located just 1 km from the upcoming Azim Premji University campus with immediate registry and registry-ready demarcations.
+              located just 1 km from the upcoming Azim Premji University campus. Civils, internal roads, and utilities are under active progress.
             </motion.p>
 
             {/* Trust Badges (Infrastructure & Finance) */}
@@ -157,7 +157,7 @@ export default function Hero() {
               className="mt-3.5 text-xs text-primary-200/50 font-medium font-sans flex items-center gap-1.5"
             >
               <MousePointerClick className="w-3.5 h-3.5 text-secondary-400" />
-              <span>✓ Free Cabin Ride to Site • ✓ Registry Ready • ✓ No Obligation Callback</span>
+              <span>✓ Free Cab Ride to Site • ✓ RERA Registered • ✓ No Obligation Callback</span>
             </motion.p>
           </div>
 

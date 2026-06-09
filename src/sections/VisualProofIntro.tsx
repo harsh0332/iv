@@ -37,8 +37,8 @@ export default function VisualProofIntro() {
             className="text-base text-text-main/80 leading-relaxed font-sans max-w-2xl"
           >
             We believe in complete transparency. Every image on this page represents actual on-site 
-            development at Ivy Estate, Bhopal. Review our finished asphalt roads, security perimeter walls, 
-            local power substation, and landscaped gardens that are ready for immediate use.
+            development at Ivy Estate, Bhopal. Review our asphalt roads, security perimeter walls, 
+            local power connections, and landscaped gardens that are under active progress.
           </motion.p>
         </div>
       </Container>

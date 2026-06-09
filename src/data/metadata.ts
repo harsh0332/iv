@@ -19,7 +19,7 @@ export const siteMetadata = {
   ],
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.ivyestatebhopal.in", // Target URL for production deployments
   ogImage: "/ivy-estate-images/ivy-estate-bhopal-header1.jpg",
-  contactPhone: "+91 91114 55566",
+  contactPhone: process.env.NEXT_PUBLIC_PHONE_NUMBER || "[NEXT_PUBLIC_PHONE_NUMBER]",
 };
 
 export const seoMetadata: Metadata = {

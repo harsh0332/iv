@@ -29,14 +29,14 @@ export default function TrustBar() {
     },
     {
       id: "loans",
-      title: "Bank Loan Approved",
-      value: "Govt Banks Assistance",
+      title: "Loan Assistance",
+      value: "Loan Assistance Available",
       icon: <Landmark className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "infra",
-      title: "Fully Developed",
-      value: "Wide Asphalt Roads",
+      title: "Layout Features",
+      value: "Planned Asphalt Roads",
       icon: <Trees className="w-5 h-5 text-secondary-500" />,
     },
   ];

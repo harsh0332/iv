@@ -1,12 +1,12 @@
 import { ProjectData } from "@/types";
 
-const envPhoneRaw = process.env.NEXT_PUBLIC_PHONE_NUMBER || "+919111455566";
-const envPhoneDisplay = envPhoneRaw.startsWith("+91") && envPhoneRaw.length === 13
-  ? `+91 ${envPhoneRaw.slice(3, 8)} ${envPhoneRaw.slice(8)}`
-  : envPhoneRaw;
+const envPhoneRaw = process.env.NEXT_PUBLIC_PHONE_NUMBER || "[NEXT_PUBLIC_PHONE_NUMBER]";
+const envPhoneDisplay = envPhoneRaw;
 
-const envWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919111455566";
-const envWhatsappUrl = `https://wa.me/${envWhatsappNumber.replace(/[^0-9]/g, "")}?text=Hi,%20I%20am%20interested%20in%20Ivy%20Estate%20Bhopal%20plots.%20Please%20share%20layout%20plan%20and%20pricing.`;
+const envWhatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "[NEXT_PUBLIC_WHATSAPP_NUMBER]";
+const envWhatsappUrl = envWhatsappNumber.includes("NEXT_PUBLIC")
+  ? "#"
+  : `https://wa.me/${envWhatsappNumber.replace(/[^0-9]/g, "")}?text=Hi,%20I%20am%20interested%20in%20Ivy%20Estate%20Bhopal%20plots.%20Please%20share%20layout%20plan%20and%20pricing.`;
 
 export const projectData: ProjectData = {
   projectName: "Ivy Estate",
@@ -14,10 +14,10 @@ export const projectData: ProjectData = {
   developerName: "Vaikunthdham Colonizers & Developers",
   reraNumber: "P-OTH-17-1157",
   locationName: "Mungalia Kot, North Bhopal",
-  overviewHeading: "Secure, Luxury Living and High-Return Plot Investments",
-  overviewSubtext: "Discover a premium, gated plotted community built for high appreciation and immediate construction.",
+  overviewHeading: "Secure, Gated Plotted Community in North Bhopal",
+  overviewSubtext: "Discover a premium, gated plotted community designed with modern amenities and scenic layouts.",
   overviewContent:
-    "Ivy Estate is a premium 10-acre residential plotted development strategically located in Mungalia Kot, North Bhopal. Registered with Madhya Pradesh RERA (No. P-OTH-17-1157), the development offers 125 residential plots set within a secure, gated campus. Combining quiet green landscapes with modern features like a clubhouse, sports courts, concrete roads, and subterranean sewage systems, it provides a high-quality living environment. Positioned near the upcoming Azim Premji University campus, Ivy Estate is an exceptional opportunity for both home builders and strategic property investors.",
+    "Ivy Estate is a premium 10-acre residential plotted development (Phase 1) strategically located in Mungalia Kot, North Bhopal, near the junction of Vidisha Road and the Outer Ring Road. Registered with Madhya Pradesh RERA (No. P-OTH-17-1157), the development offers 125 total plots, with 95 plots currently available for sale and ~49% of the campus dedicated to open/common areas. Ivy Estate is RERA-registered and under active development — civil works, internal roads, drainage and electricity are in progress; the project is moving toward its RERA completion certificate. Buyers are welcome to visit and see progress.",
   
   amenities: [
     {
@@ -80,40 +80,70 @@ export const projectData: ProjectData = {
 
   distances: [
     {
-      destination: "Azim Premji University (Wipro Campus)",
+      destination: "4-Lane Ring Road",
+      distance: "within 1 km",
+      duration: "~2 min",
+      category: "Transit",
+    },
+    {
+      destination: "Azim Premji University",
       distance: "1 km",
-      duration: "3 mins",
+      duration: "~3 min",
       category: "Education",
+    },
+    {
+      destination: "Sukhi Sewaniya Railway Station",
+      distance: "2 km",
+      duration: "~5 min",
+      category: "Transit",
     },
     {
       destination: "Guru Gobind Singh Public School",
       distance: "3 km",
-      duration: "5 mins",
+      duration: "~5 min",
       category: "Education",
     },
     {
       destination: "Silver City Hospital",
       distance: "4 km",
-      duration: "7 mins",
+      duration: "~7 min",
+      category: "Healthcare",
+    },
+    {
+      destination: "Bhopal Memorial/People's Hospital/People's Mall",
+      distance: "6 km",
+      duration: "~10 min",
       category: "Healthcare",
     },
     {
       destination: "Bhopal Main Railway Station",
       distance: "11 km",
-      duration: "15 mins",
+      duration: "~15 min",
       category: "Transit",
     },
     {
-      destination: "Bhopal Airport (BHO)",
+      destination: "Bhopal Airport",
       distance: "12 km",
-      duration: "18 mins",
+      duration: "~15 min",
       category: "Transit",
     },
     {
-      destination: "Rani Kamlapati Station (Habibganj) / ISBT",
+      destination: "Rani Kamlapati (Habibganj) / ISBT",
       distance: "14 km",
-      duration: "20 mins",
+      duration: "~20 min",
       category: "Transit",
+    },
+    {
+      destination: "Upper Lake Boating Club",
+      distance: "14 km",
+      duration: "~20 min",
+      category: "Work",
+    },
+    {
+      destination: "Halali Water Sports Complex",
+      distance: "18 km",
+      duration: "~20 min",
+      category: "Work",
     },
   ],
 
@@ -122,7 +152,7 @@ export const projectData: ProjectData = {
       id: "plot-1500",
       sizeSqFt: 1500,
       dimensionsText: "30 x 50 ft",
-      status: "Selling Fast",
+      status: "Available",
       highlights: ["Ideal for standard 3BHK duplexes", "Uniform street access", "RERA approved layout"],
     },
     {
@@ -137,7 +167,7 @@ export const projectData: ProjectData = {
       sizeSqFt: 1200,
       dimensionsText: "Custom range up to 2600 sq.ft.",
       status: "Available",
-      highlights: ["Tailored sizing based on preference", "Premium park-facing alignments", "Immediate registry & possession"],
+      highlights: ["Tailored sizing based on preference", "Premium park-facing alignments", "Clear legal titles and layout approvals"],
     },
   ],
 
@@ -154,146 +184,128 @@ export const projectData: ProjectData = {
     {
       id: "faq-rera",
       question: "Is Ivy Estate Bhopal RERA approved?",
-      answer: "Yes, Ivy Estate is fully registered and approved by Madhya Pradesh RERA under RERA Registration Number P-OTH-17-1157. You can verify the approval details directly on the MP RERA official website.",
+      answer: "Yes, Ivy Estate is fully registered and approved by Madhya Pradesh RERA under Registration Number P-OTH-17-1157. You can verify the approval details directly on the MP RERA official website.",
       category: "Compliance",
     },
     {
       id: "faq-developer",
       question: "Who is the developer of this project?",
-      answer: "The project is developed by Vaikunthdham Colonizers & Developers, a trusted builder group in Bhopal focusing on secure plotted communities and modern infrastructure.",
+      answer: "The project is developed by Vaikunthdham Colonizers & Developers, a builder group in Bhopal focusing on secure plotted communities.",
       category: "Developer",
     },
     {
       id: "faq-location",
       question: "Where is Ivy Estate located?",
-      answer: "It is located in Mungalia Kot, North Bhopal, right at the junction of Vidisha Road and the Outer Ring Road. It sits in a high-growth zone just 1 km from the upcoming Azim Premji University campus.",
+      answer: "It is located in Mungalia Kot, Outer Ring Road, North Bhopal, MP (near Vidisha Road x Outer Ring Road junction; near Atal Bihari Vajpayee Hindi Vishwavidyalaya).",
       category: "Location",
     },
     {
-      id: "faq-sizes",
-      question: "What are the dimensions and sizes of plots available?",
-      answer: "The primary plot sizes are 1,500 sq. ft. (30x50 ft) and 2,100 sq. ft. (35x60 ft). However, there are custom sizes available from 1,200 sq. ft. to over 2,600 sq. ft. across the colony layout.",
-      category: "Plots",
-    },
-    {
-      id: "faq-possession",
-      question: "Is the project ready for immediate construction?",
-      answer: "Yes! Major infrastructure like internal roads, electric cabling, boundary walls, and drainage lines are complete. Demarcations are in place, and possession and registry are active.",
+      id: "faq-status",
+      question: "What is the current development status of Ivy Estate?",
+      answer: "RERA-registered and under active development — civil works, internal roads, drainage and electricity are in progress; the project is moving toward its RERA completion certificate. Buyers are welcome to visit and see progress.",
       category: "Timeline",
     },
     {
       id: "faq-visit",
       question: "How can I book a site visit?",
-      answer: "You can book a free site visit using our online request form, by calling our sales line directly, or by clicking the WhatsApp Inquiry button. We offer complimentary pick-and-drop service for site visits.",
+      answer: "You can book a site visit using our online request form, by calling our sales line directly, or by clicking the WhatsApp Inquiry button.",
       category: "Process",
-    },
-    {
-      id: "faq-independent",
-      question: "Is this website the official website of Ivy Estate?",
-      answer: "No, this is an independent marketing and lead-generation portal managed by a trusted real estate consultant. It is not the official developer website. We assist buyers in obtaining verified project brochures, layouts, and site tours.",
-      category: "General",
     },
     {
       id: "faq-loans",
       question: "Are bank home loans available for these plots?",
-      answer: "Yes, home loans and plot purchase loans are available from major nationalized and private banking institutions including SBI, HDFC Bank, ICICI Bank, and others. Our sales desk provides complete loan documentation assistance.",
+      answer: "Yes, loan assistance is available. Our desk can guide you through the documentation process with leading lending institutions.",
       category: "Financing",
     },
     {
       id: "faq-apu",
       question: "How far is the upcoming Azim Premji University campus?",
-      answer: "The upcoming 50-acre Azim Premji University campus is situated just 1 km from the project gates. This major educational development is expected to drive high demand for rental housing and plot valuations in the immediate corridor.",
+      answer: "The upcoming Azim Premji University campus is situated just 1 km from the project gates, providing excellent academic convenience in the immediate corridor.",
       category: "Location",
     },
     {
       id: "faq-road-width",
-      question: "What is the width of the internal roads in the colony?",
-      answer: "Ivy Estate features a wide asphalt main boulevard and spacious internal colony roads, ensuring smooth two-way vehicular traffic, complete with paved side walking strips and drainage structures.",
+      question: "What is the width of the internal roads?",
+      answer: "The project features a wide internal road layout design complete with paved side walking footpaths to ensure smooth transit.",
       category: "Infrastructure",
     },
     {
-      id: "faq-utilities",
-      question: "What utility networks are completed on site?",
-      answer: "The campus is equipped with operational electricity transformers, subterranean drainage lines, covered storm water channels, and demarcated drinking water connections for individual plots.",
+      id: "faq-sewage",
+      question: "What drainage provisions are planned for the layout?",
+      answer: "A modern covered drainage network and subterranean sewage layout are planned for the campus to maintain high hygiene standards.",
       category: "Infrastructure",
     },
     {
       id: "faq-security-measures",
-      question: "What security measures are in place at the colony?",
-      answer: "The project is a secure gated community surrounded by a complete masonry boundary wall. It features a grand entrance archway with manned security guards monitoring entry and exit 24/7.",
+      question: "What security measures are planned at the colony?",
+      answer: "The layout includes plans for 24x7 gated security with cameras, a grand entry gateway, and perimeter boundary walling to safeguard families.",
       category: "Security",
     },
     {
       id: "faq-greenery",
-      question: "Are there community parks and gardens inside?",
-      answer: "Yes, the colony plan includes beautifully landscaped parks, designated open green areas, pedestrian pathways, and row plantation along all roads to ensure a healthy living environment.",
+      question: "Are there community parks and gardens planned inside?",
+      answer: "Yes, the layout plan includes ~49% open/common area, including a nursery garden, temple garden, and landscaped parks.",
       category: "Amenities",
-    },
-    {
-      id: "faq-registry",
-      question: "Is immediate registry and mutation possible?",
-      answer: "Yes, the titles of the land are completely clear and legally verified. Immediate registry and mutation (Dakhil Kharij) can be completed for buyers who finalize their payments.",
-      category: "Financing",
     },
     {
       id: "faq-pricing",
       question: "How can I obtain the latest price list and availability?",
-      answer: "Due to changing inventory, we recommend clicking 'Book Site Visit' or 'WhatsApp Inquiry' to receive the latest available plot numbers, pricing sheets, and current layout chart directly on your phone.",
+      answer: "Due to changing inventory, we recommend submitting a query or using the WhatsApp link to receive the latest available plot numbers, pricing sheets, and current layout chart directly on your phone.",
       category: "General",
     },
     {
       id: "faq-corner-plots",
-      question: "Are corner plots or east-facing plots available?",
-      answer: "Yes, a selected number of premium corner plots, east-facing plots, and park-facing plots are planned. Please contact our sales desk to check the real-time availability of these premium alignments.",
+      question: "Are corner plots or park-facing plots available?",
+      answer: "Yes, standard plot sizes are 1500 sq ft and 2100 sq ft, with a limited number of odd-sized plots at key locations. Please inquire for real-time availability of corner or park-facing options.",
       category: "Plots",
     },
     {
       id: "faq-nri",
       question: "Is there home loan assistance for NRI buyers?",
-      answer: "Yes, we provide full NRI documentation and loan processing assistance through associated banks that specialize in home loans for non-resident Indian citizens.",
+      answer: "Yes, we provide full NRI documentation and loan processing assistance through institutions that specialize in home loans for non-resident Indian citizens.",
       category: "Financing",
     },
     {
       id: "faq-transport",
       question: "What transit facilities are close to the site?",
-      answer: "The site sits directly on the Vidisha Road corridor and connects to the Bhopal Outer Ring Road. Bhopal Main Railway Station is 11 km away, Raja Bhoj Airport is 12 km away, and the ISBT/Habibganj corridor is 14 km away.",
+      answer: "Sukhi Sewaniya Railway Station is 2 km (~5 min), Bhopal Main Railway Station is 11 km (~15 min), and Raja Bhoj Airport is 12 km (~15 min) away.",
       category: "Location",
     },
     {
       id: "faq-water",
       question: "How is water supply managed for the residential plots?",
-      answer: "Provisions for a central groundwater boring, community overhead reservoir tanks, and pipeline nodes connecting to each individual plot boundary have been established.",
+      answer: "Provisions for a central groundwater boring, community overhead water storage reservoir, and individual pipeline nodes connecting to each plot are planned.",
       category: "Infrastructure",
     },
     {
       id: "faq-construction",
       question: "Are there any design guidelines for building homes?",
-      answer: "While residents have the freedom to design custom duplexes or villas, all construction must align with the local town planning rules (T&CP) and local municipal bylaws to maintain structural harmony.",
+      answer: "All home construction must align with the local town planning rules (T&CP) and local municipal bylaws to maintain structural harmony.",
       category: "Plots",
     },
     {
       id: "faq-maintenance",
-      question: "Who will maintain the colony infrastructure after launch?",
-      answer: "A dedicated residents welfare association (RWA) will be formed to manage security, park maintenance, street lighting, and road upkeep after the builder hands over the campus.",
+      question: "Who will maintain the infrastructure after development?",
+      answer: "A dedicated residents welfare association (RWA) is planned to manage security, park maintenance, and common facilities once the campus is handed over.",
       category: "General",
     },
     {
       id: "faq-diversion",
       question: "Is the land diverted for residential usage?",
-      answer: "Yes, 100% of the plotted layout area has been legally diverted (Nirvasit/Diverted) for residential use, conforming to all state Town & Country Planning (T&CP) department requirements.",
+      answer: "Yes, the plotted layout area has been legally diverted for residential use, conforming to Bhopal Town & Country Planning (T&CP) department requirements.",
       category: "Compliance",
     },
     {
-      id: "faq-possession-time",
-      question: "How long does it take to get physical possession?",
-      answer: "Physical possession of the plots can be handed over immediately upon the execution of the sale deed. The boundary stones are already installed for all numbered plots.",
-      category: "Timeline",
+      id: "faq-amenities-planned",
+      question: "What lifestyle amenities are planned for the project?",
+      answer: "Lifestyle amenities planned as part of the layout include a Royal Clubhouse with gym + poolside garden, swimming/wading pool, 2 tennis courts, 1 badminton court, a basketball ring, a large cricket/football field with spectator benches, and an open-air amphitheater.",
+      category: "Amenities",
     },
     {
-      id: "faq-amenities-operational",
-      question: "Are the lifestyle amenities like club and pool already ready?",
-      answer: "The gated security, roads, electrification, and drainage systems are fully operational. Construction on the community clubhouse and sports courts is progressing on schedule on-site.",
-      category: "Amenities",
+      id: "faq-size-options",
+      question: "What are the standard plot sizes in Phase 1?",
+      answer: "The plots are mainly 1500 sq ft (e.g. 30x50 ft) and 2100 sq ft (e.g. 35x60 ft), along with select odd-sized plots at key layout points.",
+      category: "Plots",
     }
   ],
 

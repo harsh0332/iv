@@ -96,7 +96,7 @@
       "sizeBytes": 231173,
       "title": "Flat Terrain Residential Plot View",
       "alt": "Residential plot ready for construction at Ivy Estate",
-      "description": "Levelled plots with demarcated boundary stones, ready for immediate construction."
+      "description": "Levelled plots with demarcated areas, ready for foundation work."
     },
     {
       "filename": "ivy-estate-plot-layout-bhopal-photo-123.jpeg",
@@ -114,7 +114,7 @@
       "sizeBytes": 301059,
       "title": "Development Progress View",
       "alt": "Developed layout overview at Ivy Estate",
-      "description": "Overview of the developed layout, showing completed electrification and landscaping features."
+      "description": "Overview of the layout, showing planned electrification and landscaping features."
     },
     {
       "filename": "ivy-estate-plot-layout-bhopal-photo-125.jpeg",
@@ -213,7 +213,7 @@
       "sizeBytes": 195341,
       "title": "Site Progress: Transformer Station",
       "alt": "Colony electric substation and transformer installation",
-      "description": "Completed installation of the local power transformer station and fencing."
+      "description": "Installation of the local power transformer station and fencing in progress."
     },
     {
       "filename": "ivy-estate-plot-layout-bhopal-site-pic11-1.jpeg",
@@ -238,18 +238,18 @@
       "category": "Progress Images",
       "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic13.jpeg",
       "sizeBytes": 200103,
-      "title": "Site Progress: Plot Marking Stones",
+      "title": "Site Progress: Plot Demarcations",
       "alt": "Delineation markings of plots",
-      "description": "Delineation and concrete marking posts dividing individual residential plots."
+      "description": "Delineation and marking lines dividing individual residential plots."
     },
     {
       "filename": "ivy-estate-plot-layout-bhopal-site-pic14.jpeg",
       "category": "Progress Images",
       "path": "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic14.jpeg",
       "sizeBytes": 134865,
-      "title": "Site Progress: Completed Asphalt Road Section",
+      "title": "Site Progress: Asphalt Road Section Progress",
       "alt": "Finished section of main asphalt driveway",
-      "description": "Fully prepared section of main internal double-lane driveway with street lights."
+      "description": "Section of main internal double-lane driveway with street lights in progress."
     }
   ]
 }

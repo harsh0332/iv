@@ -38,8 +38,8 @@ export default function PlotOptionsIntro() {
           >
             Ivy Estate offers a variety of residential plots, primarily featuring 1,500 Sq. Ft. 
             and 2,100 Sq. Ft. dimensions, with custom sizes up to 2,600 Sq. Ft. 
-            All layouts are RERA-approved, fully levelled, and designed to support independent villa 
-            construction with immediate registry and possession.
+            All layouts are RERA-approved and designed to support independent villa 
+            construction in a planned residential colony.
           </motion.p>
         </div>
       </Container>

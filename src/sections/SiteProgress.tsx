@@ -17,40 +17,40 @@ export default function SiteProgress() {
 
   const progressMilestones = [
     {
-      phase: "Phase 1: Site Grading & Demarcation",
-      status: "Completed",
-      desc: "Preserved natural topography and levelled individual residential sectors. Concrete boundary marking stones are fully set in place.",
+      phase: "Phase 1: Site Layout & Grading",
+      status: "In Progress",
+      desc: "Leveling of individual residential sectors and grading works are actively progressing on-site.",
       verification: "Verified by Photo #122 & Site Progress Pic #13",
     },
     {
-      phase: "Phase 2: Security Boundary Wall & Gates",
-      status: "Completed",
-      desc: "Masonry perimeter walling is constructed around the 10-acre campus boundaries, and the main entry checkpoint archway structure is completed.",
+      phase: "Phase 2: Security Boundary Wall & Gate",
+      status: "In Progress",
+      desc: "Masonry perimeter walling construction around the 10-acre campus boundaries and the entry gateway structures are under active development.",
       verification: "Verified by Site Progress Pic #1 & Pic #4",
     },
     {
-      phase: "Phase 3: Subterranean Pipes & Storm Drains",
-      status: "Completed",
-      desc: "Laying of primary underground sewage piping nodes and roadside concrete stormwater drainage channels is finished.",
+      phase: "Phase 3: Drainage & Storm Drains",
+      status: "In Progress",
+      desc: "Installation of underground drainage pipes and storm water channel structures is currently in progress.",
       verification: "Verified by Site Progress Pic #5 & Pic #8",
     },
     {
-      phase: "Phase 4: Asphalt Road Paving",
-      status: "Completed",
-      desc: "Wide internal streets and double-lane main boulevards are paved with high-quality asphalt, complete with stone borders.",
+      phase: "Phase 4: Internal Road Construction",
+      status: "In Progress",
+      desc: "Wide internal streets and double-lane main boulevards are under layout formation and grading, moving toward final paving.",
       verification: "Verified by Site Progress Pic #2 & Pic #14",
     },
     {
-      phase: "Phase 5: Electrical Substation Station",
-      status: "Completed",
-      desc: "Local power transformer substation is installed, wired, and fenced. Street lighting posts have been placed along all avenues.",
+      phase: "Phase 5: Electrical Infrastructure",
+      status: "In Progress",
+      desc: "Local power supply provisions, central transformer nodes, and underground electrical wiring networks are in active progress.",
       verification: "Verified by Site Progress Pic #3 & Pic #11",
     },
     {
-      phase: "Phase 6: Park Landscaping & Avenue Trees",
-      status: "Completed",
-      desc: "Neighborhood park lawns are turfed, pathways paved, and rows of avenue trees are planted along streets for green buffer zones.",
-      verification: "Verified by Site Progress Pic #6 & Pic #12",
+      phase: "Phase 6: Landscaping & Amenities",
+      status: "Planned",
+      desc: "Neighborhood park lawns, Clubhouse structure, wading pool, and avenue plantation are planned as part of the phase 1 layout design.",
+      verification: "Verified by Site Plan & Architectural Blueprints",
     },
   ];
 
@@ -103,7 +103,13 @@ export default function SiteProgress() {
                     <h4 className="text-sm font-semibold text-primary-800">
                       {milestone.phase}
                     </h4>
-                    <span className="bg-secondary-50 border border-secondary-100 text-secondary-600 font-semibold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shrink-0">
+                    <span className={`border font-semibold px-2 py-0.5 rounded text-[10px] uppercase tracking-wider shrink-0 ${
+                      milestone.status === "In Progress"
+                        ? "bg-amber-50 border-amber-200 text-amber-700"
+                        : milestone.status === "Planned"
+                        ? "bg-blue-50 border-blue-200 text-blue-700"
+                        : "bg-secondary-50 border-secondary-100 text-secondary-600"
+                    }`}>
                       {milestone.status}
                     </span>
                   </div>

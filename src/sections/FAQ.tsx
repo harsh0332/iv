@@ -11,7 +11,7 @@ const CATEGORIES = [
   { id: "general", label: "Project & RERA" },
   { id: "location", label: "Location & Connectivity" },
   { id: "plots", label: "Plots & Infrastructure" },
-  { id: "financing", label: "Registry & Financing" },
+  { id: "financing", label: "Loan & Layout" },
 ];
 
 // Helper to map project-data categories to our tabs
@@ -107,7 +107,7 @@ export default function FAQ() {
                 Need Specific Help?
               </h3>
               <p className="text-text-main/70 leading-relaxed mb-6">
-                If you have a query about a specific plot placement or require customized registry information, 
+                If you have a query about a specific plot placement or require customized layout information, 
                 our project advisors are ready to help you directly.
               </p>
               

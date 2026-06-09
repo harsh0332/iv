@@ -10,32 +10,32 @@ export default function InfrastructureHighlights() {
   const highlights = [
     {
       id: "roads",
-      title: "Finished Asphalt Roads",
-      desc: "Wide dual-lane main driveways and internal roads are fully paved and roller-compacted, complete with kerbstones and pavement pathways.",
+      title: "Internal Asphalt Roads",
+      desc: "Wide dual-lane main driveways and internal roads are planned, with grading and roadbed layout work currently in progress.",
       img: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic14.jpeg",
-      alt: "Completed asphalt roads and streetlights at Ivy Estate Bhopal",
+      alt: "Asphalt roads and streetlights development at Ivy Estate Bhopal",
       icon: <Milestone className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "power",
-      title: "Local Power Substation",
-      desc: "Dedicated transformers, electricity distribution posts, and underground wiring nodes have been fully set up to guarantee power stability.",
+      title: "Dedicated Power Supply",
+      desc: "Provisions for dedicated transformers, electricity distribution posts, and underground wiring nodes are planned and progressing to ensure power availability.",
       img: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic11.jpeg",
-      alt: "Completed transformer substation at Ivy Estate Bhopal",
+      alt: "Transformer substation planned site at Ivy Estate Bhopal",
       icon: <Zap className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "sewage",
-      title: "Subterranean Sewage System",
-      desc: "Underground heavy-duty drainage pipes are fully laid out below the road beds, keeping the campus clean and waterlog-free.",
+      title: "Planned Drainage Network",
+      desc: "Underground heavy-duty drainage pipes and covered channels are designed and under development below the road beds to ensure clean water flow.",
       img: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic8.jpeg",
-      alt: "Underground sewage line layout work at Ivy Estate Bhopal",
+      alt: "Drainage infrastructure layout work at Ivy Estate Bhopal",
       icon: <Layers className="w-5 h-5 text-secondary-500" />,
     },
     {
       id: "security",
-      title: "Manned Entry Gate",
-      desc: "Grand entry gateway arch and security guard checkpoint cabin structures are complete, forming the gated security base.",
+      title: "Planned Gated Security",
+      desc: "A grand entry gateway arch and security guard checkpoint cabin structures are planned to secure the layout boundaries.",
       img: "/ivy-estate-images/ivy-estate-plot-layout-bhopal-site-pic1.jpg",
       alt: "Main entry security gate progress at Ivy Estate Bhopal",
       icon: <ShieldCheck className="w-5 h-5 text-secondary-500" />,
@@ -62,7 +62,7 @@ export default function InfrastructureHighlights() {
             variants={fadeUp(0.7)}
             className="text-2xl md:text-3xl font-serif font-medium text-primary-800 leading-tight tracking-tight"
           >
-            Infrastructure Verified On-Ground
+            Project Development & Infrastructure
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -71,8 +71,8 @@ export default function InfrastructureHighlights() {
             variants={fadeUp(0.8)}
             className="text-xs text-text-main/70 mt-2.5 leading-relaxed font-sans"
           >
-            No empty claims. These 4 key infrastructure pillars are fully completed on-site 
-            and ready to support immediate home building.
+            These 4 key layout infrastructure pillars are planned or under active construction 
+            as the project progresses toward completion.
           </motion.p>
         </div>
 

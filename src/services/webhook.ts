@@ -1,4 +1,4 @@
-import { LeadPayload, WebhookPayload } from "@/types/lead";
+import { LeadPayload } from "@/types/lead";
 
 /**
  * Sends lead data to the configured n8n / CRM webhook endpoint.
@@ -13,7 +13,7 @@ export async function sendLeadToWebhook(lead: LeadPayload): Promise<boolean> {
     return true;
   }
 
-  // Format the message content for easy readability in spreadsheet/CRM
+  // Format the message content for easy readability in Formspree / email
   let combinedMessage = lead.message || "";
   if (lead.leadType === "site-visit") {
     combinedMessage = `[Site Visit Request] Date: ${lead.visitDate || "Not Selected"}, Time: ${lead.visitTime || "Not Selected"}, Budget: ${lead.budgetRange || "Not Specified"}. ${combinedMessage}`;
@@ -21,18 +21,19 @@ export async function sendLeadToWebhook(lead: LeadPayload): Promise<boolean> {
     combinedMessage = `[Plot Details Inquiry] ${combinedMessage}`;
   }
 
-  // Prepare standard payload as requested
-  const payload: WebhookPayload = {
+  // Prepare flat Formspree-friendly payload
+  const payload = {
     name: lead.name,
     phone: lead.phone,
     leadType: lead.leadType,
     message: combinedMessage.trim(),
-    timestamp: lead.timestamp,
+    visitDate: lead.visitDate || "",
+    visitTime: lead.visitTime || "",
+    budgetRange: lead.budgetRange || "",
     source: lead.source || "direct",
     page: lead.pageUrl || "/",
-    ...(lead.visitDate && { visitDate: lead.visitDate }),
-    ...(lead.visitTime && { visitTime: lead.visitTime }),
-    ...(lead.budgetRange && { budgetRange: lead.budgetRange }),
+    timestamp: lead.timestamp,
+    _subject: `New Ivy Estate Lead: ${lead.name} (${lead.phone})`,
   };
 
   // Retry logic (up to 3 attempts)
@@ -43,6 +44,7 @@ export async function sendLeadToWebhook(lead: LeadPayload): Promise<boolean> {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Accept": "application/json",
         },
         body: JSON.stringify(payload),
       });

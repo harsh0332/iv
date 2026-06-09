@@ -39,7 +39,7 @@ export default function MobileConversionBar() {
           className="flex-[2] flex items-center justify-center gap-2 h-12 rounded-xl bg-luxury-gold text-white font-bold text-xs uppercase tracking-wider shadow-sm shadow-secondary-900/10 hover:opacity-95 transition-opacity focus-visible:outline-none cursor-pointer"
         >
           <Calendar className="w-4 h-4" />
-          <span>Book Visit</span>
+          <span>Book Free Visit</span>
         </button>
       </div>
     </div>

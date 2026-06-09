@@ -147,7 +147,7 @@ export default function Hero() {
                 leftIcon={<MessageSquare className="w-5 h-5 fill-current" />}
                 className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:border-white/40"
               >
-                Get Layout & Price List
+                Get Layout & Details on WhatsApp
               </Button>
             </motion.div>
 
@@ -157,7 +157,7 @@ export default function Hero() {
               className="mt-3.5 text-xs text-primary-200/50 font-medium font-sans flex items-center gap-1.5"
             >
               <MousePointerClick className="w-3.5 h-3.5 text-secondary-400" />
-              <span>✓ Free Cab Pickup for Site Visit • ✓ RERA Registered • ✓ No Obligation Callback</span>
+              <span>Free site visit &bull; No payment collected online &bull; Authorized marketing partner</span>
             </motion.p>
           </div>
 

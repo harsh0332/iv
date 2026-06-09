@@ -124,7 +124,7 @@ export default function Header() {
               onClick={() => openModal("site-visit")}
               leftIcon={<Calendar className="w-3.5 h-3.5" />}
             >
-              Book Site Visit
+              Book Free Site Visit
             </Button>
           </div>
 
@@ -189,7 +189,7 @@ export default function Header() {
                 className="w-full justify-center"
                 leftIcon={<Calendar className="w-5 h-5" />}
               >
-                Book Site Visit
+                Book Free Site Visit
               </Button>
               
               <div className="grid grid-cols-2 gap-3">

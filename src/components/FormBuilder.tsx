@@ -1,53 +1,30 @@
 "use client";
 
-import React, { useState, FormEvent, ChangeEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import Button from "./Button";
-import { CheckCircle2 } from "lucide-react";
-import { tracking } from "@/lib/tracking";
+import { CheckCircle2, MessageSquare } from "lucide-react";
+import { projectData } from "@/data/project-data";
 
-interface FormField {
-  id: string;
-  label: string;
-  type: "text" | "tel" | "email" | "select" | "date";
-  placeholder?: string;
-  required: boolean;
-  options?: string[];
-}
-
-interface FormBuilderProps {
-  fields: FormField[];
-  submitLabel?: string;
-  onSuccess?: (data: Record<string, string>) => void;
-  formType: "site-visit" | "lead" | "plot-inquiry" | "callback";
-  extraData?: Record<string, unknown>;
-}
-
-export default function FormBuilder({
-  fields,
-  submitLabel = "Submit Details",
-  onSuccess,
-  formType,
-  extraData = {},
-}: FormBuilderProps) {
-  const [formData, setFormData] = useState<Record<string, string>>(() => {
-    const initial: Record<string, string> = {};
-    fields.forEach((f) => {
-      initial[f.id] = f.type === "select" && f.options ? f.options[0] : "";
-    });
-    return initial;
+export default function FormBuilder() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    plotSize: "1,500 Sq. Ft.",
+    visitDay: "Any Day",
+    message: "",
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submissionFailed, setSubmissionFailed] = useState(false);
   const [honeypot, setHoneypot] = useState("");
 
   const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error on change
     if (errors[name]) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -60,23 +37,30 @@ export default function FormBuilder({
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
 
-    fields.forEach((field) => {
-      const val = formData[field.id]?.trim();
+    if (!formData.name.trim()) {
+      newErrors.name = "Full Name is required";
+    }
 
-      if (field.required && !val) {
-        newErrors[field.id] = `${field.label} is required`;
-      } else if (val) {
-        if (field.type === "email" && !/\S+@\S+\.\S+/.test(val)) {
-          newErrors[field.id] = "Please enter a valid email address";
-        }
-        if (field.type === "tel" && !/^[6-9]\d{9}$/.test(val.replace(/[^0-9]/g, ""))) {
-          newErrors[field.id] = "Please enter a valid 10-digit mobile number";
-        }
-      }
-    });
+    const cleanPhone = formData.phone.replace(/[^0-9]/g, "");
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Mobile Number is required";
+    } else if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+      newErrors.phone = "Please enter a valid 10-digit mobile number (starting with 6-9)";
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  };
+
+  const getWhatsAppFallbackUrl = () => {
+    const whatsappUrl = projectData.contact.whatsappUrl;
+    const rawNumber = whatsappUrl.includes("wa.me")
+      ? whatsappUrl.split("wa.me/")[1]?.split("?")[0]
+      : "919111455566";
+    const cleanNumber = (rawNumber || "919111455566").replace(/[^0-9]/g, "");
+    
+    const text = `Hi, I tried to submit a request on the site but encountered an issue. Here are my details:\nName: ${formData.name}\nPhone: ${formData.phone}\nPlot Size Interest: ${formData.plotSize}\nPreferred Visit Day: ${formData.visitDay}\nMessage: ${formData.message || "None"}`;
+    return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(text)}`;
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -84,29 +68,35 @@ export default function FormBuilder({
     if (!validate()) return;
 
     setIsSubmitting(true);
+    setSubmissionFailed(false);
+
+    // Spam Honeypot Check
+    if (honeypot.trim()) {
+      // Simulate success for bots to prevent spam notifications
+      setTimeout(() => {
+        setIsSuccess(true);
+        setIsSubmitting(false);
+      }, 500);
+      return;
+    }
 
     try {
+      const webhookUrl = process.env.NEXT_PUBLIC_WEBHOOK_URL || "/api/leads";
       const source = typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("utm_source") || "direct" : "direct";
       const pageUrl = typeof window !== "undefined" ? window.location.href : "/";
 
-      // 1. Prepare Payload
       const payload = {
-        name: formData.name || "",
-        phone: formData.phone || "",
-        leadType: formType,
-        message: formData.message || "",
-        visitDate: formData.visitDate || "",
-        visitTime: formData.visitTimeSlot || formData.visitTime || "",
-        budgetRange: formData.budgetRange || "",
+        name: formData.name,
+        phone: formData.phone,
+        plotSize: formData.plotSize,
+        visitDay: formData.visitDay,
+        message: formData.message,
         source,
-        timestamp: new Date().toISOString(),
         pageUrl,
-        honeypot,
-        ...extraData,
+        timestamp: new Date().toISOString(),
       };
 
-      // 2. Submit to Next.js API Route
-      const response = await fetch("/api/leads", {
+      const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -114,31 +104,29 @@ export default function FormBuilder({
         body: JSON.stringify(payload),
       });
 
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || "Submission failed");
-      }
-
-      // 3. Trigger Analytics Events
-      tracking.formSubmitted(formType, { name: payload.name, phone: payload.phone });
-      if (formType === "site-visit") {
-        tracking.siteVisitSubmitted({ date: payload.visitDate, time: payload.visitTime });
-      } else if (formType === "callback") {
-        tracking.callbackRequested();
+      if (!response.ok) {
+        throw new Error("Server returned non-ok status");
       }
 
       setIsSuccess(true);
-      if (onSuccess) {
-        onSuccess(formData);
-      }
     } catch (err) {
       console.error("Submission failed:", err);
-      const message = err instanceof Error ? err.message : "Something went wrong. Please try again.";
-      setErrors({ global: message });
+      setSubmissionFailed(true);
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      name: "",
+      phone: "",
+      plotSize: "1,500 Sq. Ft.",
+      visitDay: "Any Day",
+      message: "",
+    });
+    setIsSuccess(false);
+    setSubmissionFailed(false);
   };
 
   if (isSuccess) {
@@ -151,15 +139,15 @@ export default function FormBuilder({
           Request Submitted Successfully
         </h3>
         <p className="text-sm text-text-main/70 leading-relaxed max-w-sm">
-          Thank you for your interest! A dedicated Relationship Manager from our team will contact you at{" "}
-          <strong className="text-primary-800">{formData.phone}</strong> shortly.
+          Thanks! Our team will call you shortly at{" "}
+          <strong className="text-primary-800">{formData.phone}</strong> to confirm layout plans.
         </p>
         <div className="mt-6">
           <Button
             type="button"
             variant="outline"
             size="sm"
-            onClick={() => setIsSuccess(false)}
+            onClick={handleReset}
           >
             Submit Another Request
           </Button>
@@ -169,7 +157,7 @@ export default function FormBuilder({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 font-sans text-sm">
+    <form onSubmit={handleSubmit} className="space-y-4 font-sans text-sm text-left">
       {/* Honeypot field (hidden from users, filled by bots) */}
       <input
         type="text"
@@ -180,64 +168,124 @@ export default function FormBuilder({
         autoComplete="off"
         tabIndex={-1}
       />
-      {errors.global && (
-        <div className="rounded-lg bg-red-50 border border-red-200 p-3 text-xs text-red-600 font-semibold">
-          {errors.global}
+
+      {/* Name Field */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="form-name" className="text-xs font-semibold text-primary-800 flex items-center justify-between">
+          <span>Full Name</span>
+          <span className="text-red-500 font-bold">*</span>
+        </label>
+        <input
+          id="form-name"
+          name="name"
+          type="text"
+          placeholder="Enter your full name"
+          value={formData.name}
+          onChange={handleInputChange}
+          className={`w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all ${
+            errors.name ? "border-red-400 focus:ring-red-400 focus:border-red-400" : ""
+          }`}
+        />
+        {errors.name && (
+          <span className="text-[11px] font-semibold text-red-600 animate-fadeIn">
+            {errors.name}
+          </span>
+        )}
+      </div>
+
+      {/* Phone Field */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="form-phone" className="text-xs font-semibold text-primary-800 flex items-center justify-between">
+          <span>Mobile Number</span>
+          <span className="text-red-500 font-bold">*</span>
+        </label>
+        <input
+          id="form-phone"
+          name="phone"
+          type="tel"
+          placeholder="Enter 10-digit mobile number"
+          value={formData.phone}
+          onChange={handleInputChange}
+          className={`w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all ${
+            errors.phone ? "border-red-400 focus:ring-red-400 focus:border-red-400" : ""
+          }`}
+        />
+        {errors.phone && (
+          <span className="text-[11px] font-semibold text-red-600 animate-fadeIn">
+            {errors.phone}
+          </span>
+        )}
+      </div>
+
+      {/* Plot Size Interest Select */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="form-plotsize" className="text-xs font-semibold text-primary-800">
+          <span>Plot Size Interest</span>
+        </label>
+        <select
+          id="form-plotsize"
+          name="plotSize"
+          value={formData.plotSize}
+          onChange={handleInputChange}
+          className="w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all cursor-pointer"
+        >
+          <option value="1,500 Sq. Ft.">1,500 Sq. Ft.</option>
+          <option value="2,100 Sq. Ft.">2,100 Sq. Ft.</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+      </div>
+
+      {/* Preferred Visit Day Select */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="form-visitday" className="text-xs font-semibold text-primary-800">
+          <span>Preferred Visit Day (Optional)</span>
+        </label>
+        <select
+          id="form-visitday"
+          name="visitDay"
+          value={formData.visitDay}
+          onChange={handleInputChange}
+          className="w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all cursor-pointer"
+        >
+          <option value="Any Day">Any Day</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+          <option value="Weekday">Weekday</option>
+        </select>
+      </div>
+
+      {/* Message Text Field */}
+      <div className="flex flex-col gap-1.5">
+        <label htmlFor="form-message" className="text-xs font-semibold text-primary-800">
+          <span>Message / Special Requests (Optional)</span>
+        </label>
+        <input
+          id="form-message"
+          name="message"
+          type="text"
+          placeholder="e.g. requesting corner plot, pick-up from railway station"
+          value={formData.message}
+          onChange={handleInputChange}
+          className="w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all"
+        />
+      </div>
+
+      {submissionFailed && (
+        <div className="flex flex-col gap-3 p-4 bg-red-50 border border-red-200 rounded-xl text-center font-sans">
+          <p className="text-xs text-red-700 font-semibold leading-relaxed">
+            Network issue. Please submit details via WhatsApp.
+          </p>
+          <a
+            href={getWhatsAppFallbackUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-success-muted text-white text-xs font-semibold rounded-xl hover:opacity-95 transition-opacity"
+          >
+            <MessageSquare className="w-4 h-4 fill-white" />
+            <span>Submit via WhatsApp</span>
+          </a>
         </div>
       )}
-
-      {fields.map((field) => {
-        const error = errors[field.id];
-        const inputId = `field-${field.id}`;
-
-        return (
-          <div key={field.id} className="flex flex-col gap-1.5">
-            <label
-              htmlFor={inputId}
-              className="text-xs font-semibold text-primary-800 flex items-center justify-between"
-            >
-              <span>{field.label}</span>
-              {field.required && <span className="text-red-500 font-bold">*</span>}
-            </label>
-
-            {field.type === "select" ? (
-              <select
-                id={inputId}
-                name={field.id}
-                value={formData[field.id]}
-                onChange={handleInputChange}
-                className={`w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all cursor-pointer ${
-                  error ? "border-red-400 focus:ring-red-400 focus:border-red-400" : ""
-                }`}
-              >
-                {field.options?.map((opt, i) => (
-                  <option key={i} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
-            ) : (
-              <input
-                id={inputId}
-                name={field.id}
-                type={field.type}
-                placeholder={field.placeholder}
-                value={formData[field.id]}
-                onChange={handleInputChange}
-                className={`w-full rounded-lg border border-border-soft bg-accent/25 px-4 py-3 min-h-[48px] text-text-main outline-none focus:border-transparent focus:bg-white focus:ring-2 focus:ring-primary-500 transition-all ${
-                  error ? "border-red-400 focus:ring-red-400 focus:border-red-400" : ""
-                }`}
-              />
-            )}
-
-            {error && (
-              <span className="text-[11px] font-semibold text-red-600 animate-fadeIn" id={`error-${field.id}`}>
-                {error}
-              </span>
-            )}
-          </div>
-        );
-      })}
 
       <div className="pt-2">
         <Button
@@ -245,9 +293,9 @@ export default function FormBuilder({
           variant="primary"
           size="lg"
           isLoading={isSubmitting}
-          className="w-full text-center py-4"
+          className="w-full text-center py-4 justify-center"
         >
-          {submitLabel}
+          Schedule Private Site Visit
         </Button>
       </div>
     </form>

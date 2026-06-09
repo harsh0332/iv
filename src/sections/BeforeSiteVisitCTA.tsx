@@ -55,7 +55,7 @@ export default function BeforeSiteVisitCTA() {
               leftIcon={<Calendar className="w-4.5 h-4.5" />}
               className="w-full justify-center"
             >
-              Book Site Visit
+              Book Free Site Visit
             </Button>
             <Button
               variant="outline"
@@ -64,7 +64,7 @@ export default function BeforeSiteVisitCTA() {
               leftIcon={<MessageSquare className="w-4.5 h-4.5 fill-current" />}
               className="w-full justify-center border-border-soft hover:bg-accent/40 text-text-main"
             >
-              WhatsApp for Plot Details
+              Get Layout on WhatsApp
             </Button>
           </div>
         </div>

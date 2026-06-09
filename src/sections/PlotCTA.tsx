@@ -65,7 +65,7 @@ export default function PlotCTA() {
                 leftIcon={<Calendar className="w-5 h-5" />}
                 className="w-full justify-center"
               >
-                Book Site Visit
+                Book Free Site Visit
               </Button>
               <Button
                 variant="outline"
@@ -74,7 +74,7 @@ export default function PlotCTA() {
                 leftIcon={<MessageSquare className="w-5 h-5 fill-current" />}
                 className="w-full justify-center border-white/20 text-white hover:bg-white/10 hover:border-white/40"
               >
-                Inquire on WhatsApp
+                Get Layout on WhatsApp
               </Button>
             </div>
           </div>

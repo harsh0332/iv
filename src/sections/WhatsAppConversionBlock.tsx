@@ -13,7 +13,7 @@ export default function WhatsAppConversionBlock() {
   };
 
   const benefits = [
-    "Receive instant price lists and layout sheets",
+    "Receive layout sheets and project specifications",
     "Real-time plot availability check",
     "Fast site tour coordination and pick-up bookings",
   ];
@@ -28,7 +28,7 @@ export default function WhatsAppConversionBlock() {
                 Instant Access
               </span>
               <h3 className="text-lg font-serif font-medium text-primary-800 mb-4">
-                Get Plot Details on WhatsApp
+                Get Layout & Details on WhatsApp
               </h3>
 
               <div className="space-y-2.5">
@@ -49,7 +49,7 @@ export default function WhatsAppConversionBlock() {
                 leftIcon={<MessageSquare className="w-5 h-5 fill-current" />}
                 className="w-full md:w-auto px-8 justify-center"
               >
-                Inquire on WhatsApp
+                Get Layout on WhatsApp
               </Button>
             </div>
           </div>

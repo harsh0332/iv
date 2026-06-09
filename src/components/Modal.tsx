@@ -144,13 +144,7 @@ export default function Modal() {
 
             {/* Modal Body / Form Container */}
             <div className="modal-form-container font-sans" id="modal-form-slot">
-              <FormBuilder
-                fields={getFieldsForModal(activeModal)}
-                formType={activeModal}
-                submitLabel={getSubmitLabelForModal(activeModal)}
-                extraData={modalData ? (modalData as Record<string, unknown>) : undefined}
-                onSuccess={closeModal}
-              />
+              <FormBuilder />
             </div>
           </motion.div>
         </div>

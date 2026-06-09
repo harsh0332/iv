@@ -134,11 +134,7 @@ export default function SiteVisitBooking() {
               Fill out the parameters below. Our coordination team will call you to confirm your date, time-slot, and vehicle pick-up details.
             </p>
 
-            <FormBuilder
-              fields={fields}
-              formType="site-visit"
-              submitLabel="Schedule Private Site Visit"
-            />
+            <FormBuilder />
           </div>
 
         </div>

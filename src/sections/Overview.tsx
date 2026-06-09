@@ -140,12 +140,12 @@ export default function Overview() {
                 leftIcon={<MessageSquare className="w-5 h-5 fill-current" />}
                 className="w-full sm:w-auto border-white/20 text-white hover:bg-white/10 hover:border-white/40"
               >
-                Inquire on WhatsApp
+                Get Layout on WhatsApp
               </Button>
             </div>
 
             <span className="text-[10px] text-primary-100/40 uppercase tracking-widest font-semibold font-sans mt-5">
-              Available Daily: 9:00 AM - 6:00 PM • Verified RERA Site visit
+              Free site visit &bull; No payment collected online &bull; Authorized marketing partner
             </span>
           </div>
         </motion.div>

@@ -50,11 +50,7 @@ export default function QuickInquiryForm() {
 
             {/* Right Column (7 cols) */}
             <div className="md:col-span-7 border-l-0 md:border-l border-border-soft/60 pl-0 md:pl-8">
-              <FormBuilder
-                fields={fields}
-                formType="lead"
-                submitLabel="Send Project Details"
-              />
+              <FormBuilder />
             </div>
 
           </div>

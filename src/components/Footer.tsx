@@ -191,9 +191,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-white/50 text-[11px] gap-6">
-          <div className="text-center md:text-left space-y-1">
+          <div className="text-center md:text-left space-y-1.5 max-w-4xl">
             <p>&copy; {currentYear} Ivy Estate Bhopal Plotted Campus. All rights reserved.</p>
-            <p className="text-white/40">Project information is provided for informational purposes. Buyers are encouraged to verify details before making purchase decisions.</p>
+            <p className="text-white/45 leading-relaxed">
+              Authorized marketing & channel partner — not the official developer website. Ivy Estate is developed by Vaikunthdham Colonizers & Developers (RERA P-OTH-17-1157). Details are indicative; please verify on the MP RERA portal before booking. No payment is collected on this website.
+            </p>
           </div>
           <div className="flex gap-6 shrink-0">
             <a

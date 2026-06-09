@@ -34,12 +34,12 @@ export default function SchemaMarkup() {
     }
   };
 
-  // 3. LocalBusiness (RealEstateAgent) Schema
+  // 3. LocalBusiness (RealEstateAgent) Schema (Approximate Geo coordinates)
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Ivy Estate Bhopal Plotted Campus",
-    "description": "Secure premium residential plots (1,500 & 2,100 sq.ft.) at Ivy Estate, North Bhopal. Gated community with clubhouse, sports courts & RERA approval (P-OTH-17-1157).",
+    "description": "Premium gated residential plotted layout near Vidisha Road x Outer Ring Road, Bhopal.",
     "image": `${siteUrl}/ivy-estate-images/ivy-estate-bhopal-header1.jpg`,
     "telephone": projectData.contact.phoneRaw,
     "email": projectData.contact.email,
@@ -55,13 +55,36 @@ export default function SchemaMarkup() {
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "23.3283",
-      "longitude": "77.4475"
+      "longitude": "77.4475",
+      "description": "Approximate location coordinates for Mungalia Kot area."
     },
     "url": siteUrl,
-    "openingHours": "Mo-Su 09:00-19:00"
+    "openingHours": "Mo-Su 10:00-18:00"
   };
 
-  // 4. BreadcrumbList Schema
+  // 4. Residence Schema (RealEstate/Residence)
+  const residenceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Residence",
+    "name": "Ivy Estate Plotted Development",
+    "description": "Premium 10-acre RERA-registered gated residential plotted layout in Mungalia Kot, North Bhopal.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mungalia Kot, Junction of Vidisha Road and Outer Ring Road",
+      "addressLocality": "Bhopal",
+      "addressRegion": "MP",
+      "postalCode": "462038",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "23.3283",
+      "longitude": "77.4475",
+      "description": "Approximate location coordinates for Mungalia Kot area."
+    }
+  };
+
+  // 5. BreadcrumbList Schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -93,6 +116,20 @@ export default function SchemaMarkup() {
     ]
   };
 
+  // 6. FAQPage Schema (dynamically generated from truthful corrected FAQs)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": projectData.faq.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
       <script
@@ -109,7 +146,15 @@ export default function SchemaMarkup() {
       />
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(residenceSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </>
   );

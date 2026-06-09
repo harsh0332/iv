@@ -8,6 +8,18 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 import { GraduationCap, School, Activity, Plane, Train, Milestone } from "lucide-react";
 
 export default function LocationGrid() {
+  // Sort distances numerically to show nearest first
+  const sortedDistances = [...projectData.distances].sort((a, b) => {
+    const parseDist = (str: string) => {
+      if (str.includes("within")) {
+        return 0.5; // "within 1 km" is closest
+      }
+      const match = str.match(/([0-9.]+)\s*km/i);
+      return match ? parseFloat(match[1]) : 999;
+    };
+    return parseDist(a.distance) - parseDist(b.distance);
+  });
+
   // Map icons and subtitles based on distance destination names
   const getProximityMeta = (dest: string) => {
     if (dest.includes("Azim Premji")) {
@@ -67,7 +79,7 @@ export default function LocationGrid() {
           viewport={{ once: true, margin: "-5%" }}
         >
           <Grid cols={3}>
-            {projectData.distances.map((item, i) => {
+            {sortedDistances.map((item, i) => {
               const meta = getProximityMeta(item.destination);
               return (
                 <motion.div

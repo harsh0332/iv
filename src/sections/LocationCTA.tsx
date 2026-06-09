@@ -44,7 +44,7 @@ export default function LocationCTA() {
             <p className="text-sm text-primary-100/90 leading-relaxed max-w-2xl font-sans mb-8">
               Plots are best evaluated on-ground. Book a complimentary private site tour daily. 
               Our company vehicle will pick you up and drop you back at any location in Bhopal. 
-              Review the concrete road layouts, electrical grids, and RERA approvals with our on-site team.
+              Review the planned road layouts, electrical grid alignments, and RERA approvals with our on-site team.
             </p>
 
             {/* CTAs */}

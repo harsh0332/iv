@@ -10,9 +10,14 @@ import { Clock } from "lucide-react";
 export default function LocationTimeline() {
   // Sort distances numerically to build an accurate progressive timeline
   const sortedTimeline = [...projectData.distances].sort((a, b) => {
-    const distA = parseFloat(a.distance.replace(/[^0-9.]/g, ""));
-    const distB = parseFloat(b.distance.replace(/[^0-9.]/g, ""));
-    return distA - distB;
+    const parseDist = (str: string) => {
+      if (str.includes("within")) {
+        return 0.5; // "within 1 km" is closest
+      }
+      const match = str.match(/([0-9.]+)\s*km/i);
+      return match ? parseFloat(match[1]) : 999;
+    };
+    return parseDist(a.distance) - parseDist(b.distance);
   });
 
   return (
